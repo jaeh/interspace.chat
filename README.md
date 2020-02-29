@@ -6,7 +6,7 @@ A simple selector for predefined JitSi rooms. The idea is to give the community 
 - based on create-react-app
 - injects JitSi API
 
-forked from orioginal gitlab deployment https://gitlab.com/hackalong/interspace.chat
+forked from original gitlab deployment https://gitlab.com/hackalong/interspace.chat
 
 ## Fork instructions
 
