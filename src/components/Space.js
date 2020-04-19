@@ -144,8 +144,7 @@ const Space = () => {
           <SpaceInfo>
             {displayedJoinedSpaces ? (
               <Fragment>
-                You're in the{" "}
-                <CurrentSpace>{displayedJoinedSpaces}</CurrentSpace>!
+                You're in <CurrentSpace>{displayedJoinedSpaces}</CurrentSpace>!
               </Fragment>
             ) : (
               <Fragment>
