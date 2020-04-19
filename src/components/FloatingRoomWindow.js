@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Rnd } from "react-rnd";
 
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
+import { useTheme } from "../contexts/ThemeContext";
 
 import LoftRadioInstance from "./integrations/LoftRadioInstance";
 import YoutubeInstance from "./integrations/YoutubeInstance";
@@ -31,7 +32,7 @@ const SpaceHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   .windowKey {
-    color: whitesmoke;
+    color: ${(props) => props.theme.body};
   }
 `;
 const SpaceHeaderElement = styled.div`

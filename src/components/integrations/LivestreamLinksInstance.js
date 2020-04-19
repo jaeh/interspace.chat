@@ -18,6 +18,7 @@ const Descriptor = styled.p`
   font-weight: 100;
   margin: 3rem;
   text-align: center;
+  color: ${(props) => props.theme.body};
 `;
 
 const ParagraphStyled = styled.div`
