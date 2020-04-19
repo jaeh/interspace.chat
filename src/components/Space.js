@@ -1,164 +1,164 @@
-import React, { Fragment, useContext } from "react";
-import styled from "@emotion/styled";
-import { BrowserView, MobileView } from "react-device-detect";
+import React, { Fragment, useContext } from "react"
+import styled from "@emotion/styled"
+import { BrowserView, MobileView } from "react-device-detect"
 
-import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
+import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext"
 
-import Ethturin from "./Ethturin";
-import SvgImagemap from "./Imagemap";
-import Imagemap from "../img/imagemap.svg";
+import Ethturin from "./Ethturin"
+import SvgImagemap from "./Imagemap"
+import Imagemap from "../img/imagemap.svg"
 
 const Headline = styled.h6`
-  color: black;
-  font-weight: 500;
-  font-size: 1.3rem;
-  padding: 1rem;
+	color: black;
+	font-weight: 500;
+	font-size: 1.3rem;
+	padding: 1rem;
 
-  a {
-    font-weight: 100;
-    color: ${(props) => props.theme.body};
-    background-color: ${(props) => props.theme.background};
-    text-decoration: underline;
-  }
+	a {
+		font-weight: 100;
+		color: ${(props) => props.theme.body};
+		background-color: ${(props) => props.theme.background};
+		text-decoration: underline;
+	}
 
-  @media (max-width: 600px) {
-    background-color: whitesmoke;
-  }
-`;
+	@media (max-width: 600px) {
+		background-color: whitesmoke;
+	}
+`
 
 const SpaceSelector = styled.nav`
-  padding-bottom: 1rem;
-  width: 100%;
-  font-weight: 500;
+	padding-bottom: 1rem;
+	width: 100%;
+	font-weight: 500;
 
-  @media (max-width: 600px) {
-    padding: 0px;
-    min-height: 10vh;
-  }
-`;
+	@media (max-width: 600px) {
+		padding: 0px;
+		min-height: 10vh;
+	}
+`
 
 const SpaceInfo = styled.div`
-  text-align: right;
-  padding-top: 1rem;
-  padding-right: 1rem;
-  margin: 0 auto;
-  font-size: 1rem;
-  font-weight: 500;
-  z-index: 100;
-  div {
-    color: ${(props) => props.theme.body};
-  }
-`;
+	text-align: right;
+	padding-top: 1rem;
+	padding-right: 1rem;
+	margin: 0 auto;
+	font-size: 1rem;
+	font-weight: 500;
+	z-index: 100;
+	div {
+		color: ${(props) => props.theme.body};
+	}
+`
 
 const Descripton = styled.div`
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  background-color: black;
-  z-index: 1;
-  margin: 0px;
-  font-size: 0.8rem;
-  padding-bottom: 0.4rem;
-  p {
-    padding: 0.5rem;
-    margin: 0px;
-  }
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	background-color: black;
+	z-index: 1;
+	margin: 0px;
+	font-size: 0.8rem;
+	padding-bottom: 0.4rem;
+	p {
+		padding: 0.5rem;
+		margin: 0px;
+	}
 
-  a {
-    padding: 0px;
-  }
-  @media (max-width: 600px) {
-    position: relative;
-    background-color: whitesmoke;
-    max-width: 80vw;
-    margin: 0 auto;
-  }
-`;
+	a {
+		padding: 0px;
+	}
+	@media (max-width: 600px) {
+		position: relative;
+		background-color: whitesmoke;
+		max-width: 80vw;
+		margin: 0 auto;
+	}
+`
 
 const CurrentSpace = styled.span`
-  color: ${(props) => props.theme.highlight};
-`;
+	color: ${(props) => props.theme.highlight};
+`
 
 const MobileContainer = styled.div`
-  background: whitesmoke;
-  justify-content: center;
-`;
+	background: whitesmoke;
+	justify-content: center;
+`
 
 const StrongStyled = styled.strong`
-  font-weight: 700;
-`;
+	font-weight: 700;
+`
 
 const MapContainer = styled("div")`
-  display: grid;
-  min-height: 90vh;
-  justify-content: center;
-  align-content: center;
-  margin: 0;
-`;
+	display: grid;
+	min-height: 90vh;
+	justify-content: center;
+	align-content: center;
+	margin: 0;
+`
 
 const Space = () => {
-  const { currentFloatingSpaces, addFloatingSpace } = useContext(
-    FloatingSpaceContext
-  );
+	const { currentFloatingSpaces, addFloatingSpace } = useContext(
+		FloatingSpaceContext
+	)
 
-  const space = currentFloatingSpaces;
+	const space = currentFloatingSpaces
 
-  let displayedJoinedSpaces;
-  if (currentFloatingSpaces.length > 0) {
-    if (currentFloatingSpaces.length > 2) {
-      let nameCount = currentFloatingSpaces.length;
-      displayedJoinedSpaces =
-        currentFloatingSpaces.slice(0, nameCount - 2).join(", ") +
-        ", " +
-        currentFloatingSpaces.slice(nameCount - 2, nameCount).join(" & ");
-    } else {
-      displayedJoinedSpaces = currentFloatingSpaces.join(" & ");
-    }
-  }
+	let displayedJoinedSpaces
+	if (currentFloatingSpaces.length > 0) {
+		if (currentFloatingSpaces.length > 2) {
+			let nameCount = currentFloatingSpaces.length
+			displayedJoinedSpaces =
+				currentFloatingSpaces.slice(0, nameCount - 2).join(", ") +
+				", " +
+				currentFloatingSpaces.slice(nameCount - 2, nameCount).join(" & ")
+		} else {
+			displayedJoinedSpaces = currentFloatingSpaces.join(" & ")
+		}
+	}
 
-  const openInNewTab = (url) => {
-    let win = window.open(url, "_blank");
-    win.focus();
-  };
+	const openInNewTab = (url) => {
+		let win = window.open(url, "_blank")
+		win.focus()
+	}
 
-  const featureNotHereYet = () => {
-    alert("This feature is currently not available");
-  };
+	const featureNotHereYet = () => {
+		alert("This feature is currently not available")
+	}
 
-  const poap = () => {
-    if (space.indexOf("claim poap token") > -1) {
-      window.alert(
-        "To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem."
-      );
-    } else {
-      window.alert(
-        "To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem."
-      );
-      addFloatingSpace("claim poap token");
-    }
-  };
+	const poap = () => {
+		if (space.indexOf("claim poap token") > -1) {
+			window.alert(
+				"To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem."
+			)
+		} else {
+			window.alert(
+				"To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem."
+			)
+			addFloatingSpace("claim poap token")
+		}
+	}
 
-  return (
-    <SpaceSelector>
-      <BrowserView>
-        <span>
-          <SpaceInfo>
-            {displayedJoinedSpaces ? (
-              <Fragment>
-                You're in the{" "}
-                <CurrentSpace>{displayedJoinedSpaces}</CurrentSpace>!
-              </Fragment>
-            ) : (
-              <Fragment>
-                <div>Click on a portal</div>
-              </Fragment>
-            )}
-          </SpaceInfo>
-        </span>
-        <MapContainer>
-          <Ethturin />
-        </MapContainer>
-        {/** 
+	return (
+		<SpaceSelector>
+			<BrowserView>
+				<span>
+					<SpaceInfo>
+						{displayedJoinedSpaces ? (
+							<Fragment>
+								You're in the{" "}
+								<CurrentSpace>{displayedJoinedSpaces}</CurrentSpace>!
+							</Fragment>
+						) : (
+							<Fragment>
+								<div>Click on a portal</div>
+							</Fragment>
+						)}
+					</SpaceInfo>
+				</span>
+				<MapContainer>
+					<Ethturin />
+				</MapContainer>
+				{/** 
 				<div>
 					<div className="m-grid-container">
 						<svg
@@ -293,35 +293,34 @@ const Space = () => {
           </div>
         </div>
             */}
-      </BrowserView>
-      <MobileView>
-        <MobileContainer>
-          <Headline>
-            Welcome to{" "}
-            <a
-              href="https://noncon.interspace.chat"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              NONCON 2020
-            </a>
-          </Headline>
-          <Descripton>
-            <p>This website supports desktop only. </p>
-            <StrongStyled>Sorry for the inconvenience.</StrongStyled>
-            <p>
-              You can watch our livestream and maybe hack your way into it, but
-              there is no official support.
-            </p>
-            <p>NONCON2020 livestream at:</p>
-            <a href="https://www.youtube.com/channel/UCsF67FGXtv4lplQyQSPizbQ">
-              Paralelle Polis Vienna Youtube channel
-            </a>
+			</BrowserView>
+			<MobileView>
+				<MobileContainer>
+					<Headline>
+						Welcome to{" "}
+						<a
+							href="https://noncon.interspace.chat"
+							target="_blank"
+							rel="noopener noreferrer"
+							style={{ textDecoration: "none" }}>
+							EthTurin 2020
+						</a>
+					</Headline>
+					<Descripton>
+						<p>This website supports desktop only. </p>
+						<StrongStyled>Sorry for the inconvenience.</StrongStyled>
+						<p>
+							You can watch our livestream and maybe hack your way into it, but
+							there is no official support.
+						</p>
+						<p>NONCON2020 livestream at:</p>
+						<a href="https://www.youtube.com/channel/UCsF67FGXtv4lplQyQSPizbQ">
+							Paralelle Polis Vienna Youtube channel
+						</a>
 
-            {/**<a href="https://portal.interspace.chat">or open a new room</a>**/}
-          </Descripton>
-          {/**
+						{/**<a href="https://portal.interspace.chat">or open a new room</a>**/}
+					</Descripton>
+					{/**
 					<MobileSelectorContainer>
 						
             <Room roomName="capsule1" />
@@ -331,10 +330,10 @@ const Space = () => {
           
           <JitsiInstanceMobile />
           */}
-        </MobileContainer>
-      </MobileView>
-    </SpaceSelector>
-  );
-};
+				</MobileContainer>
+			</MobileView>
+		</SpaceSelector>
+	)
+}
 
-export default Space;
+export default Space

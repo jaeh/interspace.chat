@@ -53,8 +53,8 @@ const Logolink = styled.a`
 
 const LightSwitch = styled.button`
 	position: fixed;
-	top: 90vh;
-	right: 1rem;
+	top: 88vh;
+	right: 2rem;
 	justify-self: start;
 	align-self: flex-start;
 	border: 0px;
