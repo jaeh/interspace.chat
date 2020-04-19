@@ -5,8 +5,6 @@ import { BrowserView, MobileView } from "react-device-detect";
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 
 import Ethturin from "./Ethturin";
-import SvgImagemap from "./Imagemap";
-import Imagemap from "../img/imagemap.svg";
 
 const Headline = styled.h6`
   color: black;
@@ -96,46 +94,22 @@ const MapContainer = styled("div")`
 `;
 
 const Space = () => {
-  const { currentFloatingSpaces, addFloatingSpace } = useContext(
-    FloatingSpaceContext
-  );
+  const { currentFloatingSpaces } = useContext(FloatingSpaceContext);
 
   const space = currentFloatingSpaces;
 
   let displayedJoinedSpaces;
-  if (currentFloatingSpaces.length > 0) {
-    if (currentFloatingSpaces.length > 2) {
-      let nameCount = currentFloatingSpaces.length;
+  if (space.length > 0) {
+    if (space.length > 2) {
+      let nameCount = space.length;
       displayedJoinedSpaces =
-        currentFloatingSpaces.slice(0, nameCount - 2).join(", ") +
+        space.slice(0, nameCount - 2).join(", ") +
         ", " +
-        currentFloatingSpaces.slice(nameCount - 2, nameCount).join(" & ");
+        space.slice(nameCount - 2, nameCount).join(" & ");
     } else {
-      displayedJoinedSpaces = currentFloatingSpaces.join(" & ");
+      displayedJoinedSpaces = space.join(" & ");
     }
   }
-
-  const openInNewTab = (url) => {
-    let win = window.open(url, "_blank");
-    win.focus();
-  };
-
-  const featureNotHereYet = () => {
-    alert("This feature is currently not available");
-  };
-
-  const poap = () => {
-    if (space.indexOf("claim poap token") > -1) {
-      window.alert(
-        "To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem."
-      );
-    } else {
-      window.alert(
-        "To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem."
-      );
-      addFloatingSpace("claim poap token");
-    }
-  };
 
   return (
     <SpaceSelector>

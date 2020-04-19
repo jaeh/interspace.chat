@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { useTheme } from "../../contexts/ThemeContext";
 
 const Container = styled.div`
   height: 100%;
@@ -33,13 +32,13 @@ const ParagraphStyled = styled.div`
 `;
 
 const LinkStyled = styled.a`
-    color: ${(props) => props.theme.highlight};
-    font-size: 18px;
-    font-weight: 600;
-    img {
-      padding-right: 1rem;
-    }
-}`;
+  color: ${(props) => props.theme.highlight};
+  font-size: 18px;
+  font-weight: 600;
+  img {
+    padding-right: 1rem;
+  }
+`;
 
 function LivestreamLinksInstance() {
   return (
@@ -57,6 +56,7 @@ function LivestreamLinksInstance() {
             src={require("../../img/ethturin-elements/stop-covid-19.png")}
             width="auto"
             height="18px"
+            alt=""
           />
           stop covid 19
         </LinkStyled>
@@ -69,6 +69,7 @@ function LivestreamLinksInstance() {
             src={require("../../img/ethturin-elements/mentor-ring.png")}
             width="auto"
             height="18px"
+            alt=""
           />
           mentor ring
         </LinkStyled>
@@ -81,6 +82,7 @@ function LivestreamLinksInstance() {
             src={require("../../img/ethturin-elements/sdg-workshop.png")}
             width="auto"
             height="18px"
+            alt=""
           />
           sdg workshop
         </LinkStyled>

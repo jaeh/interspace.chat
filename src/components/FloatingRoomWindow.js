@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Rnd } from "react-rnd";
 
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
-import { useTheme } from "../contexts/ThemeContext";
 
 import LoftRadioInstance from "./integrations/LoftRadioInstance";
 import YoutubeInstance from "./integrations/YoutubeInstance";
@@ -14,7 +13,7 @@ import RoomInstance from "./integrations/RoomInstance";
 import LivestreamLinkInstance from "./integrations/LivestreamLinksInstance";
 
 import AboutInstance from "./external-sites/AboutInstance";
-import LivepeerInstance from "./external-sites/LivepeerInstance";
+import LivepeerInstance from "./integrations/LivepeerInstance";
 import DonateInstance from "./external-sites/DonateInstance";
 import RaffleInstance from "./external-sites/RaffleInstance";
 import HelpInstance from "./external-sites/HelpInstance";

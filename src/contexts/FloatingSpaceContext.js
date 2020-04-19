@@ -3,7 +3,7 @@ import { RoomNames } from "../utils/constants";
 
 export const FloatingSpaceContext = createContext([{}, () => {}]);
 
-const FloatingSpaceContextProvider = props => {
+const FloatingSpaceContextProvider = (props) => {
   const [currentFloatingSpaces, setFloatingSpaces] = useState([]);
 
   function addFloatingSpace(windowKey) {
@@ -11,11 +11,11 @@ const FloatingSpaceContextProvider = props => {
 
     if (
       RoomNames.indexOf(windowKey) !== -1 &&
-      currentFloatingSpaces.findIndex(s => RoomNames.indexOf(s) !== -1) !== -1
+      currentFloatingSpaces.findIndex((s) => RoomNames.indexOf(s) !== -1) !== -1
     ) {
       setFloatingSpaces(
         currentFloatingSpaces
-          .filter(s => RoomNames.indexOf(s) === -1)
+          .filter((s) => RoomNames.indexOf(s) === -1)
           .concat([windowKey])
       );
     } else {
@@ -23,7 +23,7 @@ const FloatingSpaceContextProvider = props => {
     }
   }
   function closeFloatingSpace(windowKey) {
-    setFloatingSpaces(currentFloatingSpaces.filter(s => s !== windowKey));
+    setFloatingSpaces(currentFloatingSpaces.filter((s) => s !== windowKey));
   }
 
   return (

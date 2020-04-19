@@ -174,42 +174,11 @@ const BottomLinks = styled.span`
   align-items: center;
 `;
 
-const TableStyled = styled("table")`
-  padding-top: 10vh;
-  margin: 0 auto;
-  display: block;
-  border-spacing: 0px;
-  font-size: 0;
-  border: 0;
-  t {
-    padding: 0;
-    font-size: 0;
-  }
-
-  .justify-content {
-    display: grid;
-    min-height: 240px;
-    align-items: center;
-    justify-content: center;
-  }
-`;
-
-const ClickZone = styled.img``;
-
 const Ethturin = () => {
   const { addFloatingSpace, currentFloatingSpaces } = useContext(
     FloatingSpaceContext
   );
   const space = currentFloatingSpaces;
-
-  const openInNewTab = (url) => {
-    let win = window.open(url, "_blank");
-    win.focus();
-  };
-
-  const featureNotHereYet = () => {
-    alert("This feature is currently not available");
-  };
 
   const poap = () => {
     if (space.indexOf("claim poap token") > -1) {
@@ -231,70 +200,84 @@ const Ethturin = () => {
           <img
             className="title"
             src={require("../img/ethturin-elements/1-stop-covid-19.png")}
+            alt=""
           />
           <img
             className="portal"
             src={require("../img/ethturin-elements/stop-covid-19.png")}
+            alt="stop-covid-19-videochat"
           />
         </Cell1>
         <Cell2 onClick={() => addFloatingSpace("sdg-workshop")}>
           <img
             className="title"
             src={require("../img/ethturin-elements/2-sdg-workshop.png")}
+            alt=""
           />
           <img
             className="portal"
             src={require("../img/ethturin-elements/sdg-workshop.png")}
+            alt="sdg-workshop-videochat"
           />
         </Cell2>
         <Cell3 onClick={() => addFloatingSpace("mentor-ring")}>
           <img
             className="title"
             src={require("../img/ethturin-elements/3-mentor-ring.png")}
+            alt=""
           />
           <img
             className="portal"
             src={require("../img/ethturin-elements/mentor-ring.png")}
+            alt="mentor-ring-videochat"
           />
         </Cell3>
         <Cell4 onClick={() => addFloatingSpace("VHackathon ETH Turin")}>
           <img
             className="title"
             src={require("../img/ethturin-elements/4-v-hackathon.png")}
+            alt=""
           />
           <img
             className="portal"
             src={require("../img/ethturin-elements/v-hackathon.png")}
+            alt="ETH Turin logo"
           />
         </Cell4>
         <Cell5 onClick={() => addFloatingSpace("livestream")}>
           <img
             className="title"
             src={require("../img/ethturin-elements/5-livestream.png")}
+            alt=""
           />
           <img
             className="portal"
             src={require("../img/ethturin-elements/livestreams.png")}
+            alt="ETH Turin livestreams"
           />
         </Cell5>
         <Cell6 onClick={() => addFloatingSpace("calendar")}>
           <img
             className="title"
             src={require("../img/ethturin-elements/6-schedule.png")}
+            alt=""
           />
           <img
             className="portal"
             src={require("../img/ethturin-elements/schedule.png")}
+            alt="schedule"
           />
         </Cell6>
         <Cell7 onClick={() => addFloatingSpace("new room")}>
           <img
             className="title"
             src={require("../img/ethturin-elements/7-create-room.png")}
+            alt=""
           />
           <img
             className="portal"
             src={require("../img/ethturin-elements/new-room.png")}
+            alt="create your own videochat room"
           />
         </Cell7>
         <BottomLinks>
@@ -302,30 +285,36 @@ const Ethturin = () => {
             <img
               className="title"
               src={require("../img/ethturin-elements/8-poap.png")}
+              alt=""
             />
             <img
               className="portal"
               src={require("../img/ethturin-elements/poap.png")}
+              alt="proof of attendance logo"
             />
           </Cell8>
           <Cell9 onClick={() => addFloatingSpace("discord chat")}>
             <img
               className="title"
               src={require("../img/ethturin-elements/9-discord-chat.png")}
+              alt=""
             />
             <img
               className="portal"
               src={require("../img/ethturin-elements/discord-chat.png")}
+              alt="discord chat"
             />
           </Cell9>
           <Cell10 onClick={() => addFloatingSpace("Gitcoin")}>
             <img
               className="title"
               src={require("../img/ethturin-elements/10-gitcoin.png")}
+              alt=""
             />
             <img
               className="portal"
               src={require("../img/ethturin-elements/gitcoin.png")}
+              alt="Gitcoin Hackathon"
             />
           </Cell10>
         </BottomLinks>
