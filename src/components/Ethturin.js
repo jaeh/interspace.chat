@@ -4,8 +4,8 @@ import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 
 const ImagemapContainer = styled.div`
   transform: scale(0.65);
-  max-width: 980px;
-  max-height: 600px;
+  width: 980px;
+  height: 600px;
 `;
 
 const Grid = styled.div`
@@ -13,19 +13,19 @@ const Grid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
   div {
+    &:hover {
+      .portal {
+        filter: saturate(0%);
+      }
+      cursor: pointer;
+    }
   }
   .title {
     opacity: 0;
-    position: inherit;
-    z-index: 10;
+    z-index: 1;
   }
   .portal {
     transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-
-    &.portal:hover {
-      filter: saturate(0%);
-      cursor: pointer;
-    }
   }
 `;
 
@@ -33,6 +33,9 @@ const Cell1 = styled.div`
   display: grid;
   grid-row: 1 / span 2;
   grid-column: 1;
+  .title {
+    transform: translate(70px, 250px);
+  }
   &:hover .title {
     opacity: 1;
   }
@@ -45,6 +48,9 @@ const Cell2 = styled.div`
   display: grid;
   grid-row: 1;
   grid-column: 2;
+  .title {
+    transform: translate(53px, 250px);
+  }
   .portal {
     align-self: center;
     margin-left: 50px;
@@ -58,8 +64,14 @@ const Cell3 = styled.div`
   display: grid;
   grid-row: 1;
   grid-column: 3;
+  .title {
+    transform: translate(-60px, 250px);
+  }
   &:hover .title {
     opacity: 1;
+  }
+  .portal {
+    transform: translate(0px, 100px);
   }
 `;
 
@@ -72,6 +84,7 @@ const Cell4 = styled.div`
   }
   .title {
     justify-self: center;
+    transform: translate(0px, 150px);
   }
   &:hover .title {
     opacity: 1;
@@ -83,7 +96,10 @@ const Cell5 = styled.div`
   grid-row: 3 / span 2;
   grid-column: 1;
   justify-self: center;
-  align-self: center;
+  align-self: start;
+  .title {
+    transform: translateX(119px);
+  }
   &:hover .title {
     opacity: 1;
   }
@@ -94,6 +110,9 @@ const Cell6 = styled.div`
   grid-row: 3;
   grid-column: 2;
   justify-self: center;
+  .title {
+    transform: translateX(30px);
+  }
   &:hover .title {
     opacity: 1;
   }
@@ -108,6 +127,7 @@ const Cell7 = styled.div`
   }
   .title {
     align-self: end;
+    transform: translate(-112px, 263px);
   }
   .portal {
     align-self: center;
@@ -117,7 +137,7 @@ const Cell7 = styled.div`
 const Cell8 = styled.div`
   display: grid;
   .title {
-    place-self: center;
+    transform: translate(-160px, 120px);
   }
   .portal {
     align-self: end;
@@ -132,16 +152,22 @@ const Cell9 = styled.div`
   &:hover .title {
     opacity: 1;
   }
+  .title {
+    transform: translateX(-100px);
+  }
 `;
 
 const Cell10 = styled.div`
   display: grid;
+  .title {
+    transform: translate(-30px, 120px);
+  }
   &:hover .title {
     opacity: 1;
   }
 `;
 
-const BottomLinks = styled.div`
+const BottomLinks = styled.span`
   display: grid;
   grid-template-columns: repeat(3, 150px);
   justify-items: space-between;

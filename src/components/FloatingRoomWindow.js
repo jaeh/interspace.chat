@@ -165,8 +165,8 @@ function FloatingRoomWindow() {
     } else if (windowKey === "youtube") {
       windowOriginX = 20;
     } else if (
-      windowKey === "donate" ||
-      windowKey === "about" ||
+      windowKey === "VHackathon ETH Turin" ||
+      windowKey === "Gitcoin" ||
       windowKey === "help" ||
       windowKey === "new room" ||
       windowKey === "livestream" ||
@@ -188,8 +188,8 @@ function FloatingRoomWindow() {
     } else if (windowKey === "youtube") {
       windowOriginY = height + 10;
     } else if (
-      windowKey === "donate" ||
-      windowKey === "about" ||
+      windowKey === "VHackathon ETH Turin" ||
+      windowKey === "Gitcoin" ||
       windowKey === "help" ||
       windowKey === "new room" ||
       windowKey === "livestream" ||
@@ -204,43 +204,51 @@ function FloatingRoomWindow() {
   };
 
   const setFloatingwindowColor = (windowKey) => {
-    let bgColor = "#000000dd";
+    let bgColor = "#eeeeeedd";
 
     if (windowKey === "stop-covid-19") {
-      bgColor = "#EEA800dd";
+      bgColor = "#822BFFdd";
     } else if (windowKey === "mentor-ring") {
-      bgColor = "#8e24aadd";
+      bgColor = "#78ffbedd";
     } else if (windowKey === "sdg-workshop") {
-      bgColor = "#4285f4dd";
+      bgColor = "#cfa6ffdd";
     } else if (
       windowKey === "discord chat" &&
       space.indexOf("stop-covid-19") > -1
     ) {
-      bgColor = "#EEA800dd";
+      bgColor = "#ff8383dd";
     } else if (
       windowKey === "discord chat" &&
       space.indexOf("sdg-workshop") > -1
     ) {
-      bgColor = "#4285f4dd";
+      bgColor = "#cfa6ffdd";
     } else if (
       windowKey === "discord chat" &&
       space.indexOf("mentor-ring") > -1
     ) {
-      bgColor = "#8e24aadd";
+      bgColor = "#78ffbedd";
     } else if (windowKey === "youtube" && space.indexOf("stop-covid-19") > -1) {
-      bgColor = "#EEA800dd";
+      bgColor = "#ff8383dd";
     } else if (windowKey === "youtube" && space.indexOf("sdg-workshop") > -1) {
-      bgColor = "#4285f4dd";
+      bgColor = "#cfa6ffdd";
     } else if (windowKey === "youtube" && space.indexOf("mentor-ring") > -1) {
-      bgColor = "#8e24aadd";
-    } else if (windowKey === "donate") {
-      bgColor = "#107a00dd";
-    } else if (windowKey === "livestream" || windowKey === "new room") {
-      bgColor = "#ff0000dd";
+      bgColor = "#78ffbedd";
+    } else if (windowKey === "calendar") {
+      bgColor = "#ffa9a9dd";
+    } else if (windowKey === "new room") {
+      bgColor = "#8200ffdd";
+    } else if (windowKey === "livestream") {
+      bgColor = "#ffff6edd";
     } else if (windowKey === "claim poap token") {
-      bgColor = "#F9879Add";
+      bgColor = "#ff00e1dd";
+    } else if (windowKey === "Gitcoin") {
+      bgColor = "#0038FFdd";
+    } else if (windowKey === "discord chat") {
+      bgColor = "#0FCEA9dd";
+    } else if (windowKey === "VHackathon ETH Turin") {
+      bgColor = "#00ffecdd";
     } else {
-      bgColor = "#000000dd";
+      bgColor = "#822BFFdd";
     }
     return bgColor;
   };

@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
+import { useTheme } from "../../contexts/ThemeContext";
 
 const Container = styled.div`
   height: 100%;
@@ -8,12 +9,20 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background: whitesmoke;
+  color: ${(props) => props.theme.body};
+  background: ${(props) => props.theme.background};
+`;
+
+const Descriptor = styled.p`
+  font-size: 18px;
+  font-weight: 100;
+  margin: 3rem;
+  text-align: center;
 `;
 
 const ParagraphStyled = styled.div`
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: repeat(3, auto);
   max-width: 80%;
   line-height: 1.5rem;
   margin: 0 auto;
@@ -23,34 +32,56 @@ const ParagraphStyled = styled.div`
 `;
 
 const LinkStyled = styled.a`
-    color: red;
+    color: ${(props) => props.theme.highlight};
+    font-size: 18px;
+    font-weight: 600;
+    img {
+      padding-right: 1rem;
+    }
 }`;
 
 function LivestreamLinksInstance() {
   return (
     <Container>
-      <p>Direct links to the youtube streams of our conference tracks:</p>
+      <Descriptor>
+        Direct links to the youtube streams of our conference tracks:
+      </Descriptor>
       <ParagraphStyled>
         <LinkStyled
           href="https://youtu.be/ddYimGGyxA0"
           target="_blank"
           rel="noopener noreferrer"
         >
-          stop-covid-19
+          <img
+            src={require("../../img/ethturin-elements/stop-covid-19.png")}
+            width="auto"
+            height="18px"
+          />
+          stop covid 19
         </LinkStyled>
         <LinkStyled
           href="https://youtu.be/wppHTKiFR_Q"
           target="_blank"
           rel="noopener noreferrer"
         >
-          mentor-ring
+          <img
+            src={require("../../img/ethturin-elements/mentor-ring.png")}
+            width="auto"
+            height="18px"
+          />
+          mentor ring
         </LinkStyled>
         <LinkStyled
           href="https://youtu.be/GpwK_lHYv3Q"
           target="_blank"
           rel="noopener noreferrer"
         >
-          sdg-workshop (not live on Sunday, link is pointing to recorded stream)
+          <img
+            src={require("../../img/ethturin-elements/sdg-workshop.png")}
+            width="auto"
+            height="18px"
+          />
+          sdg workshop
         </LinkStyled>
       </ParagraphStyled>
     </Container>
