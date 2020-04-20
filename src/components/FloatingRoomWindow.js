@@ -31,6 +31,8 @@ const SpaceHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   .windowKey {
+    font-size: 18px;
+    font-weight: 600;
     color: ${(props) => props.theme.body};
   }
 `;
@@ -58,7 +60,6 @@ const spaceContainerStyle = {
   padding: "15px",
   paddingTop: "0px",
   // backdropFilter: "blur(4px)",
-  borderRadius: "10px",
   cursor: "all-scroll",
   pointerEvents: "all",
   boxShadow:
@@ -209,7 +210,7 @@ function FloatingRoomWindow() {
       bgColor = "#ff8383dd";
     } else if (windowKey === "mentor-ring") {
       bgColor = "#78ffbedd";
-    } else if (windowKey === "sdg-workshop") {
+    } else if (windowKey === "conference-room") {
       bgColor = "#cfa6ffdd";
     } else if (
       windowKey === "discord chat" &&
@@ -218,7 +219,7 @@ function FloatingRoomWindow() {
       bgColor = "#ff8383dd";
     } else if (
       windowKey === "discord chat" &&
-      space.indexOf("sdg-workshop") > -1
+      space.indexOf("conference-room") > -1
     ) {
       bgColor = "#cfa6ffdd";
     } else if (
@@ -233,7 +234,7 @@ function FloatingRoomWindow() {
       bgColor = "#ff8383dd";
     } else if (
       windowKey === "youtube" ||
-      (windowKey === "livepeer" && space.indexOf("sdg-workshop") > -1)
+      (windowKey === "livepeer" && space.indexOf("conference-room") > -1)
     ) {
       bgColor = "#cfa6ffdd";
     } else if (

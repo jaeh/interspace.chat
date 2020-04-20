@@ -9,7 +9,7 @@ function YoutubeInstance({ roomData }) {
   useEffect(() => {
     if (space.indexOf("stop-covid-19") > -1) {
       setYoutubeRoom("ddYimGGyxA0");
-    } else if (space.indexOf("sdg-workshop") > -1) {
+    } else if (space.indexOf("conference-room") > -1) {
       setYoutubeRoom("GpwK_lHYv3Q");
     } else if (space.indexOf("mentor-ring") > -1) {
       setYoutubeRoom("wppHTKiFR_Q");

@@ -40,11 +40,11 @@ function HubInstance() {
           stop-covid-19
         </LinkStyled>{" "}
         <LinkStyled
-          href="https://hubs.mozilla.com/TsLPctF/sdg-workshop-day-1"
+          href="https://hubs.mozilla.com/TsLPctF/conference-room-day-1"
           target="_blank"
           rel="noopener noreferrer"
         >
-          sdg-workshop
+          conference-room
         </LinkStyled>{" "}
         <p>mentor-ring (opens Saturday, 4th April 2020)</p>
       </ParagraphStyled>

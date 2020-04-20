@@ -9,7 +9,7 @@ function ChatInstance() {
   useEffect(() => {
     if (space.indexOf("stop-covid-19") > -1) {
       setDiscordRoom("692423172020240444");
-    } else if (space.indexOf("sdg-workshop") > -1) {
+    } else if (space.indexOf("conference-room") > -1) {
       setDiscordRoom("692423341046366208");
     } else if (space.indexOf("mentor-ring") > -1) {
       setDiscordRoom("692423431777681488");

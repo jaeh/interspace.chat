@@ -79,7 +79,7 @@ function LivestreamLinksInstance() {
           rel="noopener noreferrer"
         >
           <img
-            src={require("../../img/ethturin-elements/sdg-workshop.png")}
+            src={require("../../img/ethturin-elements/conference-room.png")}
             width="auto"
             height="18px"
             alt=""

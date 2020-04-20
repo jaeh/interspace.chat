@@ -4,8 +4,7 @@ import styled from "@emotion/styled";
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 
 const ImagemapContainer = styled.div`
-  transform: scale(0.75);
-  max-width: 70vw;
+  margin: auto auto;
   height: 70vh;
 `;
 
@@ -39,7 +38,7 @@ const Cell1 = styled.div`
   grid-row: 1 / span 2;
   grid-column: 1;
   .title {
-    transform: translate(70px, 250px);
+    transform: translate(66px, 250px);
   }
   &:hover .title {
     opacity: 1;
@@ -54,7 +53,7 @@ const Cell2 = styled.div`
   grid-row: 1;
   grid-column: 2;
   .title {
-    transform: translate(53px, 250px);
+    transform: translate(-17px, 250px);
   }
   .portal {
     align-self: center;
@@ -66,6 +65,7 @@ const Cell2 = styled.div`
 `;
 
 const Cell3 = styled.div`
+  margin-left: 3rem;
   display: grid;
   grid-row: 1;
   grid-column: 3;
@@ -126,6 +126,7 @@ const Cell6 = styled.div`
 
 const Cell7 = styled.div`
   display: grid;
+  margin-left: 3rem;
   grid-row: 2 / span 3;
   grid-column: 3;
   &:hover .title {
@@ -133,7 +134,7 @@ const Cell7 = styled.div`
   }
   .title {
     align-self: end;
-    transform: translate(-112px, 263px);
+    transform: translate(-94px, 183px);
   }
   .portal {
     align-self: center;
@@ -143,7 +144,7 @@ const Cell7 = styled.div`
 const Cell8 = styled.div`
   display: grid;
   .title {
-    transform: translate(-160px, 120px);
+    transform: scale(2) translate(-40px, 50px);
   }
   .portal {
     align-self: end;
@@ -159,14 +160,14 @@ const Cell9 = styled.div`
     opacity: 1;
   }
   .title {
-    transform: translateX(-100px);
+    transform: scale(2) translate(-10px, 0px);
   }
 `;
 
 const Cell10 = styled.div`
   display: grid;
   .title {
-    transform: translate(-30px, 120px);
+    transform: scale(2) translate(40px, 50px);
   }
   &:hover .title {
     opacity: 1;
@@ -175,7 +176,7 @@ const Cell10 = styled.div`
 
 const BottomLinks = styled.span`
   display: grid;
-  grid-template-columns: repeat(3, 150px);
+  grid-template-columns: repeat(3, 91px);
   justify-items: space-between;
   align-items: center;
 `;
@@ -214,16 +215,16 @@ const Ethturin = () => {
             alt="stop-covid-19-videochat"
           />
         </Cell1>
-        <Cell2 onClick={() => addFloatingSpace("sdg-workshop")}>
+        <Cell2 onClick={() => addFloatingSpace("conference-room")}>
           <img
             className="title"
-            src={require("../img/ethturin-elements/2-sdg-workshop.png")}
+            src={require("../img/ethturin-elements/2-conference-room.png")}
             alt=""
           />
           <img
             className="portal"
-            src={require("../img/ethturin-elements/sdg-workshop.png")}
-            alt="sdg-workshop-videochat"
+            src={require("../img/ethturin-elements/conference-room.png")}
+            alt="conference-room-videochat"
           />
         </Cell2>
         <Cell3 onClick={() => addFloatingSpace("mentor-ring")}>
