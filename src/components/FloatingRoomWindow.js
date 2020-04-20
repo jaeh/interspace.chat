@@ -228,18 +228,18 @@ function FloatingRoomWindow() {
     ) {
       bgColor = "#78ffbedd";
     } else if (
-      windowKey === "youtube" ||
-      (windowKey === "livepeer" && space.indexOf("stop-covid-19") > -1)
+      (windowKey === "youtube" || windowKey === "livepeer") &&
+      space.indexOf("stop-covid-19") > -1
     ) {
       bgColor = "#ff8383dd";
     } else if (
-      windowKey === "youtube" ||
-      (windowKey === "livepeer" && space.indexOf("conference-room") > -1)
+      (windowKey === "youtube" || windowKey === "livepeer") &&
+      space.indexOf("conference-room") > -1
     ) {
       bgColor = "#cfa6ffdd";
     } else if (
-      windowKey === "youtube" ||
-      (windowKey === "livepeer" && space.indexOf("mentor-ring") > -1)
+      (windowKey === "youtube" || windowKey === "livepeer") &&
+      space.indexOf("mentor-ring") > -1
     ) {
       bgColor = "#78ffbedd";
     } else if (windowKey === "calendar") {
