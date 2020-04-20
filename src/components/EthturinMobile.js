@@ -117,7 +117,7 @@ const EthturinMobile = () => {
       window.alert(
         "To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem."
       );
-      addFloatingSpace("claim poap token");
+      openInNewTab("https://discord.gg/pyJMZG5");
     }
   };
 
@@ -196,7 +196,7 @@ const EthturinMobile = () => {
             alt="ETH Turin livestreams"
           />
         </Cell5>
-        <Cell6 onClick={() => addFloatingSpace("calendar")}>
+        <Cell6 onClick={() => openInNewTab("https://ethturin.com/agenda")}>
           <img
             className="title"
             src={require("../img/ethturin-elements/6-schedule.png")}
