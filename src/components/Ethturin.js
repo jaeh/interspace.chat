@@ -1,17 +1,22 @@
 import React, { useContext } from "react";
 import styled from "@emotion/styled";
+
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 
 const ImagemapContainer = styled.div`
-  transform: scale(0.65);
-  width: 980px;
-  height: 600px;
+  transform: scale(0.75);
+  max-width: 70vw;
+  height: 70vh;
 `;
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
+  img {
+    max-width: 100%;
+    height: auto;
+  }
   div {
     &:hover {
       .portal {
@@ -110,6 +115,7 @@ const Cell6 = styled.div`
   grid-row: 3;
   grid-column: 2;
   justify-self: center;
+
   .title {
     transform: translateX(30px);
   }
