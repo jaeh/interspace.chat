@@ -13,7 +13,7 @@ const Wrapper = styled("div")`
   color: ${(props) => props.theme.body};
   background-color: ${(props) => props.theme.background};
   max-width: 100vw;
-  min-height: 100vh;
+  min-height: 100%;
 
   a {
     color: ${(props) => props.theme.highlight};

@@ -4,8 +4,8 @@ import styled from "@emotion/styled";
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 
 const ImagemapContainer = styled.div`
+  max-width: 40vw;
   margin: auto auto;
-  height: 70vh;
 `;
 
 const Grid = styled.div`

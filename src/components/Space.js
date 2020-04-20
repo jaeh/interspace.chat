@@ -7,6 +7,10 @@ import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 import Ethturin from "./Ethturin";
 import EthturinMobile from "./EthturinMobile";
 
+const Header = styled.span`
+  position: absolute;
+`;
+
 const Headline = styled.h6`
   color: black;
   font-weight: 500;
@@ -25,25 +29,20 @@ const Headline = styled.h6`
   }
 `;
 
-const SpaceSelector = styled.nav`
-  padding-bottom: 1rem;
-  width: 100%;
-  font-weight: 500;
-
-  @media (max-width: 600px) {
-    padding: 0px;
-    min-height: 10vh;
+const SpaceSelector = styled.div`
+  .space-container {
+    height: 100vh;
+    display: grid;
   }
 `;
 
 const SpaceInfo = styled.div`
-  text-align: right;
-  padding-top: 1rem;
-  padding-right: 1rem;
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
   margin: 0 auto;
   font-size: 1rem;
   font-weight: 500;
-  z-index: 100;
   div {
     color: ${(props) => props.theme.body};
   }
@@ -87,11 +86,7 @@ const StrongStyled = styled.strong`
 `;
 
 const MapContainer = styled("div")`
-  max-width: 70vw;
   display: grid;
-  margin: auto auto;
-  justify-self: center;
-  align-self: center;
 `;
 
 const Space = () => {
@@ -114,8 +109,8 @@ const Space = () => {
 
   return (
     <SpaceSelector>
-      <BrowserView>
-        <span>
+      <BrowserView viewClassName="space-container">
+        <Header>
           <SpaceInfo>
             {displayedJoinedSpaces ? (
               <Fragment>
@@ -127,10 +122,9 @@ const Space = () => {
               </Fragment>
             )}
           </SpaceInfo>
-        </span>
-        <MapContainer>
-          <Ethturin />
-        </MapContainer>
+        </Header>
+
+        <Ethturin />
       </BrowserView>
       <MobileView>
         <MobileContainer>
