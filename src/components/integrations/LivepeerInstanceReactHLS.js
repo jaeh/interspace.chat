@@ -12,12 +12,12 @@ const LivepeerContainer = styled.div`
 function LivepeerInstance() {
   return (
     <LivepeerContainer>
-      <iframe
-        width="640"
-        height="360"
-        src="https://media.livepeer.org/embed?aspectRatio=16%3A9&maxWidth=100%25&url=http%3A%2F%2F167.172.108.130%3A8935%2Fstream%2Fethturin.m3u8"
+      <ReactHLS
+        width="100%"
+        height="100%"
+        url="http://livepeer.interspace.chat:8935/stream/ethturin.m3u8"
         allowfullscreen
-      ></iframe>
+      />
     </LivepeerContainer>
   );
 }
