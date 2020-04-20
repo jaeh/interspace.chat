@@ -207,7 +207,7 @@ function FloatingRoomWindow() {
     let bgColor = "#eeeeeedd";
 
     if (windowKey === "stop-covid-19") {
-      bgColor = "#822BFFdd";
+      bgColor = "#ff8383dd";
     } else if (windowKey === "mentor-ring") {
       bgColor = "#78ffbedd";
     } else if (windowKey === "sdg-workshop") {
