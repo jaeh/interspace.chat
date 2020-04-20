@@ -13,7 +13,7 @@ function LivepeerInstance() {
   return (
     <LivepeerContainer>
       <ReactHLS
-        url={"http://52.29.226.43:8935/stream/hello_world/source.m3u8"}
+        url={"http://167.172.108.130:8935/stream/ethturin.m3u8"}
         width="100%"
         height="100%"
         autoplay="true"
