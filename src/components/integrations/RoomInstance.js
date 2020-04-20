@@ -6,7 +6,6 @@ import { FloatingSpaceContext } from "../../contexts/FloatingSpaceContext";
 import { RoomURLs } from "../../utils/constants";
 import JitsiInstance from "../integrations/JitsiInstance";
 import ChatInstance from "../integrations/ChatInstance";
-import LivepeerInstance from "../integrations/LivepeerInstanceReactHLS";
 // import YoutubeInstance from './integrations/YoutubeInstance';
 // import HubInstance from './integrations/HubInstance';
 

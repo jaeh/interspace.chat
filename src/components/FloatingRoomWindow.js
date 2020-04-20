@@ -13,7 +13,7 @@ import RoomInstance from "./integrations/RoomInstance";
 import LivestreamLinkInstance from "./integrations/LivestreamLinksInstance";
 
 import AboutInstance from "./external-sites/AboutInstance";
-import LivepeerInstance from "./integrations/LivepeerInstance";
+import LivepeerInstance from "./integrations/LivepeerInstanceReactHLS";
 import DonateInstance from "./external-sites/DonateInstance";
 import RaffleInstance from "./external-sites/RaffleInstance";
 import HelpInstance from "./external-sites/HelpInstance";
@@ -162,14 +162,13 @@ function FloatingRoomWindow() {
       windowOriginX = width / 2;
     } else if (windowKey === "calendar") {
       windowOriginX = width;
-    } else if (windowKey === "youtube") {
+    } else if (windowKey === "youtube" || windowKey === "livepeer") {
       windowOriginX = 20;
     } else if (
       windowKey === "VHackathon ETH Turin" ||
       windowKey === "Gitcoin" ||
       windowKey === "help" ||
       windowKey === "new room" ||
-      windowKey === "livestream" ||
       windowKey === "loft.radio" ||
       windowKey === "claim poap token"
     ) {
@@ -185,7 +184,7 @@ function FloatingRoomWindow() {
       windowOriginY = 40;
     } else if (windowKey === "calendar") {
       windowOriginY = height + 10;
-    } else if (windowKey === "youtube") {
+    } else if (windowKey === "youtube" || windowKey === "livepeer") {
       windowOriginY = height + 10;
     } else if (
       windowKey === "VHackathon ETH Turin" ||
@@ -227,11 +226,20 @@ function FloatingRoomWindow() {
       space.indexOf("mentor-ring") > -1
     ) {
       bgColor = "#78ffbedd";
-    } else if (windowKey === "youtube" && space.indexOf("stop-covid-19") > -1) {
+    } else if (
+      windowKey === "youtube" ||
+      (windowKey === "livepeer" && space.indexOf("stop-covid-19") > -1)
+    ) {
       bgColor = "#ff8383dd";
-    } else if (windowKey === "youtube" && space.indexOf("sdg-workshop") > -1) {
+    } else if (
+      windowKey === "youtube" ||
+      (windowKey === "livepeer" && space.indexOf("sdg-workshop") > -1)
+    ) {
       bgColor = "#cfa6ffdd";
-    } else if (windowKey === "youtube" && space.indexOf("mentor-ring") > -1) {
+    } else if (
+      windowKey === "youtube" ||
+      (windowKey === "livepeer" && space.indexOf("mentor-ring") > -1)
+    ) {
       bgColor = "#78ffbedd";
     } else if (windowKey === "calendar") {
       bgColor = "#ffa9a9dd";
