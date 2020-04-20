@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import styled from "@emotion/styled";
 
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
@@ -98,10 +98,14 @@ const BottomLinks = styled.span`
 `;
 
 const EthturinMobile = () => {
+  const { isHidden, toggleHidden } = useState(false);
+
   const { addFloatingSpace, currentFloatingSpaces } = useContext(
     FloatingSpaceContext
   );
   const space = currentFloatingSpaces;
+
+  const onClick = () => toggleHidden(true);
 
   const openInNewTab = (url) => {
     let win = window.open(url, "_blank");
