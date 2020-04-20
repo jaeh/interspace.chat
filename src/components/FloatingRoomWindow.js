@@ -165,9 +165,9 @@ function FloatingRoomWindow() {
       windowOriginX = width;
     } else if (windowKey === "youtube" || windowKey === "livepeer") {
       windowOriginX = 20;
+    } else if (windowKey === "VHackathon ETH Turin" || windowKey === "Gitcoin") {
+      windowOriginX = width / 3;
     } else if (
-      windowKey === "VHackathon ETH Turin" ||
-      windowKey === "Gitcoin" ||
       windowKey === "help" ||
       windowKey === "new room" ||
       windowKey === "loft.radio" ||
@@ -181,15 +181,13 @@ function FloatingRoomWindow() {
   };
   const setStartingCoordinatesY = (windowKey) => {
     let windowOriginY = 40;
-    if (windowKey === "discord chat") {
+    if (windowKey === "VHackathon ETH Turin" || windowKey === "Gitcoin" || windowKey === "discord chat") {
       windowOriginY = 40;
     } else if (windowKey === "calendar") {
       windowOriginY = height + 10;
     } else if (windowKey === "youtube" || windowKey === "livepeer") {
       windowOriginY = height + 10;
     } else if (
-      windowKey === "VHackathon ETH Turin" ||
-      windowKey === "Gitcoin" ||
       windowKey === "help" ||
       windowKey === "new room" ||
       windowKey === "livestream" ||
@@ -262,14 +260,34 @@ function FloatingRoomWindow() {
     return bgColor;
   };
 
+  const setStartingWidth = (windowKey) => {
+    let windowWidth = width - 20;
+    if (windowKey === "Gitcoin" || windowKey === "VHackathon ETH Turin") {
+      windowWidth = width * 1.3;
+    } else {
+      windowWidth = width - 20;
+    }
+    return windowWidth;
+  };
+
+  const setStartingHeight = (windowKey) => {
+    let windowHeight = height - 20;
+    if (windowKey === "Gitcoin" || windowKey === "VHackathon ETH Turin") {
+      windowHeight = height * 1.8;
+    } else {
+      windowHeight = height - 20;
+    }
+    return windowHeight;
+  };
+
   return currentFloatingSpaces.map((windowKey) => (
     <Rnd
       key={windowKey}
       default={{
         x: setStartingCoordinatesX(windowKey),
         y: setStartingCoordinatesY(windowKey),
-        width: width - 20,
-        height: height - 20,
+        width: setStartingWidth(windowKey),
+        height: setStartingHeight(windowKey),
       }}
       style={{
         ...spaceContainerStyle,
