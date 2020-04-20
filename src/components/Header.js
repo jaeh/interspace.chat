@@ -73,7 +73,6 @@ const Header = () => {
         <Logolink href="/">
           <Logotext>ethturin.interspace.chat</Logotext>
         </Logolink>
-        {/**
         <LightSwitch onClick={() => themeState.toggle()}>
           {themeState.light ? (
             <img src={LightOn} alt="light-theme" />
@@ -81,7 +80,6 @@ const Header = () => {
             <img src={LightOff} alt="dark-theme" />
           )}
         </LightSwitch>
-         */}
       </LogoSpan>
       <HelpStyled onClick={() => addFloatingSpace("help")}>Help</HelpStyled>
       <Credits />

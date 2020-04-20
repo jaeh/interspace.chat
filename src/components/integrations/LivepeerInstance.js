@@ -4,7 +4,7 @@ function LivepeerInstance() {
   return (
     <iframe
       title="livepeer"
-      src="/livepeer-player.html"
+      src="/player.html"
       style={{
         height: `100%`,
         width: `100%`,
