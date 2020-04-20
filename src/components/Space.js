@@ -90,7 +90,6 @@ const MapContainer = styled("div")`
   max-width: 70vw;
   display: grid;
   margin: auto auto;
-  padding-top: 10vh;
   justify-self: center;
   align-self: center;
 `;
