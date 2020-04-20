@@ -5,6 +5,7 @@ import { BrowserView, MobileView } from "react-device-detect";
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 
 import Ethturin from "./Ethturin";
+import EthturinMobile from "./EthturinMobile";
 
 const Headline = styled.h6`
   color: black;
@@ -52,7 +53,6 @@ const Descripton = styled.div`
   position: absolute;
   top: 0px;
   width: 100%;
-  background-color: black;
   z-index: 1;
   margin: 0px;
   font-size: 0.8rem;
@@ -66,10 +66,11 @@ const Descripton = styled.div`
     padding: 0px;
   }
   @media (max-width: 600px) {
+    text-align: block;
     position: relative;
-    background-color: whitesmoke;
-    max-width: 80vw;
+    max-width: 250px;
     margin: 0 auto;
+    padding: 2rem;
   }
 `;
 
@@ -78,7 +79,6 @@ const CurrentSpace = styled.span`
 `;
 
 const MobileContainer = styled.div`
-  background: whitesmoke;
   justify-content: center;
 `;
 
@@ -135,41 +135,30 @@ const Space = () => {
       </BrowserView>
       <MobileView>
         <MobileContainer>
+          <Descripton>
+            <p>This website is optimized for desktop. </p>
+            <StrongStyled>Sorry for the inconvenience.</StrongStyled>
+            <p>
+              To join the video-chat you might need the Jitsi Mobile App for
+              your device
+            </p>
+            <p>ETH Turin livestream at:</p>
+            <a href="https://www.youtube.com/channel/UCsF67FGXtv4lplQyQSPizbQ">
+              Paralelle Polis Vienna Youtube channel
+            </a>
+          </Descripton>
           <Headline>
             Welcome to{" "}
             <a
-              href="https://noncon.interspace.chat"
+              href="https://ethturin.interspace.chat"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
-              EthTurin 2020
+              ETH Turin 2020
             </a>
           </Headline>
-          <Descripton>
-            <p>This website supports desktop only. </p>
-            <StrongStyled>Sorry for the inconvenience.</StrongStyled>
-            <p>
-              You can watch our livestream and maybe hack your way into it, but
-              there is no official support.
-            </p>
-            <p>NONCON2020 livestream at:</p>
-            <a href="https://www.youtube.com/channel/UCsF67FGXtv4lplQyQSPizbQ">
-              Paralelle Polis Vienna Youtube channel
-            </a>
-
-            {/**<a href="https://portal.interspace.chat">or open a new room</a>**/}
-          </Descripton>
-          {/**
-					<MobileSelectorContainer>
-						
-            <Room roomName="capsule1" />
-            <Room roomName="capsule2" />
-            
-          </MobileSelectorContainer>
-          
-          <JitsiInstanceMobile />
-          */}
+          <EthturinMobile />
         </MobileContainer>
       </MobileView>
     </SpaceSelector>
