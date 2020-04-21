@@ -81,34 +81,34 @@ const Cell3 = styled.div`
 `;
 
 const Cell4 = styled.div`
-  display: grid;
-  grid-row: 2;
-  grid-column: 2;
-  .portal {
-    place-self: center;
-  }
-  .title {
-    justify-self: center;
-    transform: translate(0px, 150px);
-  }
-  &:hover .title {
-    opacity: 1;
-  }
-`;
+	display: grid;
+	grid-row: 2;
+	grid-column: 2;
+	.portal {
+		place-self: center;
+	}
+	.title {
+		justify-self: center;
+		transform: translate(0px, 150px);
+	}
+	&:hover .title {
+		opacity: 1;
+	}
+`
 
 const Cell5 = styled.div`
-  display: grid;
-  grid-row: 3 / span 2;
-  grid-column: 1;
-  justify-self: center;
-  align-self: start;
-  .title {
-    transform: translateX(119px);
-  }
-  &:hover .title {
-    opacity: 1;
-  }
-`;
+	display: grid;
+	grid-row: 3 / span 2;
+	grid-column: 1;
+	justify-self: center;
+	align-self: start;
+	.title {
+		transform: translateX(119px);
+	}
+	&:hover .title {
+		opacity: 1;
+	}
+`
 
 const Cell6 = styled.div`
   display: grid;
@@ -182,23 +182,23 @@ const BottomLinks = styled.span`
 `;
 
 const Ethturin = () => {
-  const { addFloatingSpace, currentFloatingSpaces } = useContext(
-    FloatingSpaceContext
-  );
-  const space = currentFloatingSpaces;
+	const { addFloatingSpace, currentFloatingSpaces } = useContext(
+		FloatingSpaceContext
+	)
+	const space = currentFloatingSpaces
 
-  const poap = () => {
-    if (space.indexOf("claim poap token") > -1) {
-      window.alert(
-        "To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem."
-      );
-    } else {
-      window.alert(
-        "To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem."
-      );
-      addFloatingSpace("claim poap token");
-    }
-  };
+	const poap = () => {
+		if (space.indexOf("claim poap token") > -1) {
+			window.alert(
+				"To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem."
+			)
+		} else {
+			window.alert(
+				"To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem."
+			)
+			addFloatingSpace("claim poap token")
+		}
+	}
 
   return (
     <ImagemapContainer>
@@ -330,4 +330,4 @@ const Ethturin = () => {
   );
 };
 
-export default Ethturin;
+export default Ethturin
