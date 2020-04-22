@@ -8,6 +8,8 @@ import SvgImagemap from "./SoliditySummit";
 import Ethturin from "./Ethturin";
 import EthturinMobile from "./EthturinMobile";
 
+import triangle from "../img/triangle.svg";
+
 const Header = styled.span``;
 
 const ImagemapContainer = styled.div`
@@ -95,6 +97,10 @@ const StrongStyled = styled.strong`
   font-weight: 700;
 `;
 
+const Triangle = styled.img`
+  align-self: baseline;
+`;
+
 const ShowSection = () => {
   const [isHidden, toggleHidden] = useState(false);
   const onClick = () => {
@@ -179,7 +185,9 @@ const Space = () => {
               </Fragment>
             ) : (
               <Fragment>
-                <div>Click on a ⛛</div>
+                <div>
+                  Click on a <Triangle src={triangle} height="12px" />
+                </div>
               </Fragment>
             )}
           </SpaceInfo>
