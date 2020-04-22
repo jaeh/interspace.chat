@@ -25,12 +25,8 @@ function App() {
     <Wrapper className="App">
       <RootContextProvider>
         <SpaceContext>
-          <BrowserView>
-            <Header />
-          </BrowserView>
           <Space />
         </SpaceContext>
-
         <FloatingRoomWindow />
       </RootContextProvider>
     </Wrapper>

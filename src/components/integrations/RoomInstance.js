@@ -31,21 +31,23 @@ const Container = styled.div`
 const ButtonContainer = styled.div`
   display: grid;
   grid-gap: 3rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   width: 100%;
-  justify-content: space-between;
+  height: auto;
 `;
 
 const LivestreamButton = styled.button`
   min-height: 20px;
   margin-top: 15px;
-  border: 1px solid whitesmoke;
-  background-color: whitesmoke;
+  border: 1px solid black;
   border-radius: 5px;
+  background: unset;
+  justify-self: center;
+  padding: 0.2rem;
   :hover {
     cursor: pointer;
     color: whitesmoke;
-    background: unset;
+    background: #333334;
   }
 `;
 
@@ -71,7 +73,6 @@ const ChatButton = styled.button`
 
 const StrongStyled = styled.strong`
   font-weight: 600;
-  color: black;
 `;
 
 const RoomInstance = ({ space }) => {
@@ -102,20 +103,6 @@ const RoomInstance = ({ space }) => {
               Livestream on YouTube
             </StrongStyled>
           </LivestreamButton>
-        ) : null}
-        {currentFloatingSpaces.indexOf("livepeer") === -1 ? (
-          <LivestreamButton onClick={() => addFloatingSpace("livepeer")}>
-            Watch{" "}
-            <StrongStyled className="styled">
-              Livestream with Livepeer
-            </StrongStyled>
-          </LivestreamButton>
-        ) : null}
-        {currentFloatingSpaces.indexOf("discord chat") === -1 ? (
-          <ChatButton onClick={() => addFloatingSpace("discord chat")}>
-            Open <StrongStyled className="styled">Chat</StrongStyled> for this
-            room
-          </ChatButton>
         ) : null}
       </ButtonContainer>
     </Container>

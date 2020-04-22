@@ -53,7 +53,7 @@ function LivestreamLinksInstance() {
           rel="noopener noreferrer"
         >
           <img
-            src={require("../../img/ethturin-elements/stop-covid-19.png")}
+            src={require("../../img/ethturin-elements/main-room.png")}
             width="auto"
             height="18px"
             alt=""

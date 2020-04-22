@@ -11,7 +11,7 @@ import "./styles/init.css";
 
 WebFont.load({
   google: {
-    families: ["Roboto:100,300,400,500,700,900", "sans-serif"],
+    families: ["Roboto+Mono:100,300,400,500,700", "monospace"],
   },
 });
 
@@ -22,7 +22,7 @@ ReactDOM.render(
         * {
           margin: 0px;
           padding: 0px;
-          font-family: "Helvetica Neue", Arial, sans-serif;
+          font-family: "Roboto Mono", monospace;
           font-weight: 300;
           font-size: 14px;
         }
@@ -30,15 +30,29 @@ ReactDOM.render(
           margin: 0px;
           padding: 0px;
           color: whitesmoke;
-          background-color: black;
+          background-color: #e6e7ec;
+        }
+        .hidden {
+          opacity: 0;
+          filter: url(#blur0);
         }
         .click-zone {
           transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 
           & :hover {
-            text-shadow: 10px 10px 10px black;
-            filter: saturate(0%);
             cursor: pointer;
+            filter: url(#turbulence);
+
+            & .hidden {
+              opacity: 1;
+            }
+          }
+        }
+        .click-link {
+          transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+          & :hover {
+            cursor: pointer;
+            stroke: #fce96a;
           }
         }
       `}

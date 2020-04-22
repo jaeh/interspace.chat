@@ -1,16 +1,12 @@
 const domain = "portal.interspace.chat";
 
-export const JitsiInstances = [
-  "stop-covid-19",
-  "conference-room",
-  "mentor-ring",
-];
+export const JitsiInstances = ["main-room", "lobby", "mentor-ring"];
 
 export const RoomURLs = {
-  "stop-covid-19": {
+  "main-room": {
     jitsi: {
       domain,
-      roomName: "stop-covid-19",
+      roomName: "main-room",
     },
     mozillaHub: {
       externalUrl: "https://hubs.mozilla.com/nKCuNrg/house-of-defiance",
@@ -20,10 +16,10 @@ export const RoomURLs = {
       externalUrl: "https://youtu.be/X5k8Cbr0d44",
     },
   },
-  "conference-room": {
+  lobby: {
     jitsi: {
       domain,
-      roomName: "conference-room",
+      roomName: "lobby",
     },
     mozillaHub: {
       externalUrl: "https://hubs.mozilla.com/nKCuNrg/house-of-defiance",

@@ -31,7 +31,7 @@ const CreditsStyled = styled.nav`
     padding: 0.5rem;
 
     a {
-      color: ${(props) => props.theme.highlight};}
+      color: ${(props) => props.theme.highlight};
     }
   }
 `;
@@ -57,7 +57,7 @@ const Credits = () => {
         <p>Art used:</p>
         <ul>
           <StyledListItem>
-            "ETH Turin" graphics by{" "}
+            "Solidity Summit" graphics by{" "}
             <a
               href="https://twitter.com/lililashka"
               target="_blank"

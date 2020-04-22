@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="ethturin.interspace.chat"
-      content="ETH Turin 2020 V-Hackathon"
+      content="Solidity Summit 2020 V-Hackathon"
     />
     
     <!--
@@ -24,7 +24,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>ETH Turin - at interspace.chat</title>
+    <title>Solidity Summit - at interspace.chat</title>
   </head>
   <body>
     <noscript>This page needs Javascript.</noscript>
@@ -40,5 +40,13 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script src='https://meet.jit.si/external_api.js'></script>
+    <script>
+((window.gitter = {}).chat = {}).options = {
+    room: "ethereum/solidity",
+    activationElement: false,
+    preload: true,
+  };
+    </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
   </body>
 </html>

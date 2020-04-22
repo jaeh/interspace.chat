@@ -53,7 +53,7 @@ const Logolink = styled.a`
 
 const LightSwitch = styled.button`
   position: fixed;
-  top: 88vh;
+  bottom: 1rem;
   right: 2rem;
   justify-self: start;
   align-self: flex-start;
@@ -74,11 +74,7 @@ const Header = () => {
           <Logotext>ethturin.interspace.chat</Logotext>
         </Logolink>
         <LightSwitch onClick={() => themeState.toggle()}>
-          {themeState.light ? (
-            <img src={LightOn} alt="light-theme" />
-          ) : (
-            <img src={LightOff} alt="dark-theme" />
-          )}
+          {themeState.light ? "☀️" : "🌙"}
         </LightSwitch>
       </LogoSpan>
       <HelpStyled onClick={() => addFloatingSpace("help")}>Help</HelpStyled>

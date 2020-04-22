@@ -7,9 +7,9 @@ function YoutubeInstance({ roomData }) {
   const space = currentFloatingSpaces;
 
   useEffect(() => {
-    if (space.indexOf("stop-covid-19") > -1) {
+    if (space.indexOf("main-room") > -1) {
       setYoutubeRoom("ddYimGGyxA0");
-    } else if (space.indexOf("conference-room") > -1) {
+    } else if (space.indexOf("lobby") > -1) {
       setYoutubeRoom("GpwK_lHYv3Q");
     } else if (space.indexOf("mentor-ring") > -1) {
       setYoutubeRoom("wppHTKiFR_Q");

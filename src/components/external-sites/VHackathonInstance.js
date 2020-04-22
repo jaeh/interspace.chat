@@ -3,7 +3,7 @@ import React from "react";
 function VHackathonInstance() {
   return (
     <iframe
-      title="VHackathon ETH Turin"
+      title="VHackathon Solidity Summit"
       src="https://ethturin.com"
       style={{
         height: `100%`,

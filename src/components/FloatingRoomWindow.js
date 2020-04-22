@@ -6,7 +6,7 @@ import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 
 import LoftRadioInstance from "./integrations/LoftRadioInstance";
 import YoutubeInstance from "./integrations/YoutubeInstance";
-import ChatInstance from "./integrations/ChatInstance";
+import ChatInstance from "./integrations/GitterInstance";
 import CalendarInstance from "./integrations/CalendarInstance";
 import HubInstance from "./integrations/HubInstance";
 import RoomInstance from "./integrations/RoomInstance";
@@ -89,11 +89,11 @@ function getFloatingRoomWindow(windowKey) {
     return <LoftRadioInstance />;
   } else if (RoomNames.indexOf(windowKey) > -1) {
     return <RoomInstance space={windowKey} />;
-  } else if (windowKey === "VHackathon ETH Turin") {
+  } else if (windowKey === "VHackathon Solidity Summit") {
     return <VHackathonInstance />;
   } else if (windowKey === "Gitcoin") {
     return <GitcoinInstance />;
-  } else if (windowKey === "discord chat") {
+  } else if (windowKey === "chat") {
     return <ChatInstance />;
   } else if (windowKey === "new room") {
     return <LaunchNewRoom />;
@@ -162,13 +162,17 @@ function FloatingRoomWindow() {
     } else if (windowKey === "claim poap token") {
       windowOriginX = width / 2;
     } else if (windowKey === "calendar") {
-      windowOriginX = width;
+      windowOriginX = width / 2;
     } else if (windowKey === "youtube" || windowKey === "livepeer") {
       windowOriginX = 20;
-    } else if (windowKey === "VHackathon ETH Turin" || windowKey === "Gitcoin") {
+    } else if (
+      windowKey === "VHackathon Solidity Summit" ||
+      windowKey === "Gitcoin"
+    ) {
       windowOriginX = width / 3;
     } else if (
       windowKey === "help" ||
+      windowKey === "about" ||
       windowKey === "new room" ||
       windowKey === "loft.radio" ||
       windowKey === "claim poap token"
@@ -181,14 +185,19 @@ function FloatingRoomWindow() {
   };
   const setStartingCoordinatesY = (windowKey) => {
     let windowOriginY = 40;
-    if (windowKey === "VHackathon ETH Turin" || windowKey === "Gitcoin" || windowKey === "discord chat") {
+    if (
+      windowKey === "VHackathon Solidity Summit" ||
+      windowKey === "Gitcoin" ||
+      windowKey === "discord chat"
+    ) {
       windowOriginY = 40;
     } else if (windowKey === "calendar") {
-      windowOriginY = height + 10;
+      windowOriginY = height / 2;
     } else if (windowKey === "youtube" || windowKey === "livepeer") {
       windowOriginY = height + 10;
     } else if (
       windowKey === "help" ||
+      windowKey === "about" ||
       windowKey === "new room" ||
       windowKey === "livestream" ||
       windowKey === "loft.radio" ||
@@ -202,67 +211,58 @@ function FloatingRoomWindow() {
   };
 
   const setFloatingwindowColor = (windowKey) => {
-    let bgColor = "#eeeeeedd";
+    let bgColor = "#FCE96Add";
 
-    if (windowKey === "stop-covid-19") {
-      bgColor = "#ff8383dd";
+    if (windowKey === "main-room") {
+      bgColor = "#FCE96Add";
     } else if (windowKey === "mentor-ring") {
-      bgColor = "#78ffbedd";
-    } else if (windowKey === "conference-room") {
-      bgColor = "#cfa6ffdd";
+      bgColor = "#FCE96Add";
+    } else if (windowKey === "lobby") {
+      bgColor = "#FCE96Add";
     } else if (
       windowKey === "discord chat" &&
-      space.indexOf("stop-covid-19") > -1
+      space.indexOf("main-room") > -1
     ) {
-      bgColor = "#ff8383dd";
-    } else if (
-      windowKey === "discord chat" &&
-      space.indexOf("conference-room") > -1
-    ) {
-      bgColor = "#cfa6ffdd";
+      bgColor = "#FCE96Add";
+    } else if (windowKey === "discord chat" && space.indexOf("lobby") > -1) {
+      bgColor = "#FCE96Add";
     } else if (
       windowKey === "discord chat" &&
       space.indexOf("mentor-ring") > -1
     ) {
-      bgColor = "#78ffbedd";
+      bgColor = "#FCE96Add";
     } else if (
       (windowKey === "youtube" || windowKey === "livepeer") &&
-      space.indexOf("stop-covid-19") > -1
+      space.indexOf("main-room") > -1
     ) {
-      bgColor = "#ff8383dd";
+      bgColor = "#FCE96Add";
     } else if (
       (windowKey === "youtube" || windowKey === "livepeer") &&
-      space.indexOf("conference-room") > -1
+      space.indexOf("lobby") > -1
     ) {
-      bgColor = "#cfa6ffdd";
+      bgColor = "#FCE96Add";
     } else if (
       (windowKey === "youtube" || windowKey === "livepeer") &&
       space.indexOf("mentor-ring") > -1
     ) {
-      bgColor = "#78ffbedd";
+      bgColor = "#FCE96Add";
     } else if (windowKey === "calendar") {
-      bgColor = "#ffa9a9dd";
+      bgColor = "#5C5C5Fdd";
     } else if (windowKey === "new room") {
-      bgColor = "#8200ffdd";
+      bgColor = "#5C5C5Fdd";
     } else if (windowKey === "livestream") {
-      bgColor = "#ffff6edd";
+      bgColor = "#5C5C5Fdd";
     } else if (windowKey === "claim poap token") {
       bgColor = "#ff00e1dd";
-    } else if (windowKey === "Gitcoin") {
-      bgColor = "#0038FFdd";
-    } else if (windowKey === "discord chat") {
-      bgColor = "#0FCEA9dd";
-    } else if (windowKey === "VHackathon ETH Turin") {
-      bgColor = "#00ffecdd";
     } else {
-      bgColor = "#822BFFdd";
+      bgColor = "#FCE96Add";
     }
     return bgColor;
   };
 
   const setStartingWidth = (windowKey) => {
     let windowWidth = width - 20;
-    if (windowKey === "Gitcoin" || windowKey === "VHackathon ETH Turin") {
+    if (windowKey === "Gitcoin" || windowKey === "VHackathon Solidity Summit") {
       windowWidth = width * 1.3;
     } else {
       windowWidth = width - 20;
@@ -272,7 +272,7 @@ function FloatingRoomWindow() {
 
   const setStartingHeight = (windowKey) => {
     let windowHeight = height - 20;
-    if (windowKey === "Gitcoin" || windowKey === "VHackathon ETH Turin") {
+    if (windowKey === "Gitcoin" || windowKey === "VHackathon Solidity Summit") {
       windowHeight = height * 1.8;
     } else {
       windowHeight = height - 20;

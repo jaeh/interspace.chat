@@ -32,19 +32,19 @@ function HubInstance() {
       <p>Direct links to mozilla vr hubs for our conference tracks:</p>
       <ParagraphStyled>
         <LinkStyled
-          href="https://hubs.mozilla.com/AwjLDXX/stop-covid-19-day-1
+          href="https://hubs.mozilla.com/AwjLDXX/main-room-day-1
                     "
           target="_blank"
           rel="noopener noreferrer"
         >
-          stop-covid-19
+          main-room
         </LinkStyled>{" "}
         <LinkStyled
-          href="https://hubs.mozilla.com/TsLPctF/conference-room-day-1"
+          href="https://hubs.mozilla.com/TsLPctF/lobby-day-1"
           target="_blank"
           rel="noopener noreferrer"
         >
-          conference-room
+          lobby
         </LinkStyled>{" "}
         <p>mentor-ring (opens Saturday, 4th April 2020)</p>
       </ParagraphStyled>
