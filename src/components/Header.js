@@ -61,7 +61,6 @@ const LightSwitch = styled.button`
   background: unset;
   cursor: pointer;
   font-size: 26px;
-  color: ;
 `;
 
 const Header = () => {
