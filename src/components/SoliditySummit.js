@@ -11,11 +11,11 @@ function SvgImagemap(props) {
 	const poap = () => {
 		if (space.indexOf("claim poap token") > -1) {
 			window.alert(
-				"To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem."
+				"To claim your Solidity Summit POAP token, please write a private message to @franzihei on Gitter, including a short note on what you liked best about the event. You will then receive a link to redeem your POAP badge."
 			)
 		} else {
 			window.alert(
-				"To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem."
+				"To claim your Solidity Summit POAP token, please write a private message to @franzihei on Gitter, including a short note on what you liked best about the event. You will then receive a link to redeem your POAP badge."
 			)
 		}
 	}
