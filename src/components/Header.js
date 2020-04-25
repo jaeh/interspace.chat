@@ -70,7 +70,7 @@ const Header = () => {
     <HeaderContainer>
       <LogoSpan>
         <Logolink href="/">
-          <Logotext>ethturin.interspace.chat</Logotext>
+          <Logotext>interspace.solidity-summit.ethereum.org/</Logotext>
         </Logolink>
         <LightSwitch onClick={() => themeState.toggle()}>
           {themeState.light ? "☀️" : "🌙"}

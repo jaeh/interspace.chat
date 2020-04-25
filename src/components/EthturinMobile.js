@@ -126,7 +126,9 @@ const EthturinMobile = () => {
       <Grid>
         <Cell1
           onClick={() =>
-            openInNewTab("https://portal.interspace.chat/main-room")
+            openInNewTab(
+              "https://jitsi.solidity-summit.ethereum.org//main-room"
+            )
           }
         >
           <img
@@ -141,7 +143,9 @@ const EthturinMobile = () => {
           />
         </Cell1>
         <Cell2
-          onClick={() => openInNewTab("https://portal.interspace.chat/lobby")}
+          onClick={() =>
+            openInNewTab("https://jitsi.solidity-summit.ethereum.org//lobby")
+          }
         >
           <img
             className="title"
@@ -156,7 +160,9 @@ const EthturinMobile = () => {
         </Cell2>
         <Cell3
           onClick={() =>
-            openInNewTab("https://portal.interspace.chat/mentor-ring")
+            openInNewTab(
+              "https://jitsi.solidity-summit.ethereum.org//mentor-ring"
+            )
           }
         >
           <img

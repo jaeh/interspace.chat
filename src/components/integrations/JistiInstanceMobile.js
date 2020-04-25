@@ -24,12 +24,12 @@ const JitsiInstanceMobile = () => {
   const height = 400;
 
   useEffect(() => {
-    const domain = "portal.interspace.chat";
+    const domain = "jitsi.solidity-summit.ethereum.org/";
     const options = {
       roomName: currentSpace,
       //     width: width,
       height: height,
-      parentNode: document.querySelector("#meet")
+      parentNode: document.querySelector("#meet"),
     };
     const api = new JitsiMeetExternalAPI(domain, options);
 
