@@ -8,7 +8,7 @@ import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 
 import LoftRadioInstance from "./integrations/LoftRadioInstance";
 import YoutubeInstance from "./integrations/YoutubeInstance";
-import ChatInstance from "./integrations/GitterInstance";
+import ChatInstance from "./integrations/ChatInstance";
 import CreditsInstance from "./integrations/CreditsInstance";
 import CalendarInstance from "./integrations/CalendarInstance";
 import HubInstance from "./integrations/HubInstance";
