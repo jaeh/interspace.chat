@@ -274,9 +274,7 @@ function SvgImagemap(props) {
 					<g
 						id="imagemap_svg__about"
 						className="click-link"
-						onClick={() =>
-							openInNewTab("https://solidity-summit.ethereum.org")
-						}>
+						onClick={() => addFloatingSpace("about")}>
 						<path
 							id="imagemap_svg__Rectangle_3"
 							fill="#E6E7EC00"
