@@ -2,6 +2,8 @@ import React, { useEffect, useContext, useReducer } from "react"
 import styled from "styled-components"
 import { Rnd } from "react-rnd"
 
+import { isMobile } from "react-device-detect"
+
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext"
 
 import LoftRadioInstance from "./integrations/LoftRadioInstance"
@@ -281,10 +283,10 @@ function FloatingRoomWindow() {
 		<Rnd
 			key={windowKey}
 			default={{
-				x: setStartingCoordinatesX(windowKey),
-				y: setStartingCoordinatesY(windowKey),
-				width: setStartingWidth(windowKey),
-				height: setStartingHeight(windowKey),
+				x: isMobile ? 10 : setStartingCoordinatesX(windowKey),
+				y: isMobile ? 20 : setStartingCoordinatesY(windowKey),
+				width: isMobile ? width * 1.9 : setStartingWidth(windowKey),
+				height: isMobile ? height * 1.8 : setStartingHeight(windowKey),
 			}}
 			style={{
 				...spaceContainerStyle,

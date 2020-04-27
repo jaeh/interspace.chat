@@ -48,12 +48,26 @@ ReactDOM.render(
 						}
 					}
 				}
+				.click-zone-mobile {
+					transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+					& :focus {
+						filter: url(#turbulence);
+
+						& .hidden {
+							opacity: 1;
+						}
+					}
+				}
 				.click-link {
 					transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 					& :hover {
 						cursor: pointer;
-						stroke: #fce96a;
+						fill: #fce96a;
 					}
+				}
+				.title :hover {
+					fill: black;
 				}
 			`}
 		/>

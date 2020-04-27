@@ -9,11 +9,12 @@ import ShareButton from "../ShareButton"
 const Container = styled.div`
 	max-height: 100%;
 	width: 100%;
+
 	display: flex;
 	flex-direction: column;
 	place-content: left;
 	color: ${(props) => props.theme.body};
-
+	padding: 1rem;
 	h3 {
 		color: ${(props) => props.theme.body};
 		font-size: 1.4rem;

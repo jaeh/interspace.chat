@@ -4,7 +4,8 @@ import { BrowserView, MobileView } from "react-device-detect"
 
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext"
 
-import SvgImagemap from "./Solidity-Summit"
+import SvgImagemap from "./SoliditySummit"
+import SvgImagemapMobile from "./SoliditySummitMobile"
 import Ethturin from "./Ethturin"
 import EthturinMobile from "./EthturinMobile"
 
@@ -13,6 +14,13 @@ import triangle from "../img/triangle.svg"
 const Header = styled.span``
 
 const ImagemapContainer = styled.div`
+	display: grid;
+	place-items: center;
+	max-width: 100%;
+	min-height: 90vh;
+	padding: 0;
+`
+const ImagemapContainerMobile = styled.div`
 	display: grid;
 	place-items: center;
 	min-height: 90vh;
@@ -56,9 +64,6 @@ const SpaceInfo = styled.div`
 `
 
 const Descripton = styled.div`
-	position: absolute;
-	top: 0px;
-	width: 100%;
 	z-index: 1;
 	margin: 0px;
 	font-size: 0.8rem;
@@ -73,8 +78,7 @@ const Descripton = styled.div`
 	}
 	@media (max-width: 600px) {
 		text-align: block;
-		position: relative;
-		width: 100%;
+		place-self: center;
 		margin: 0 auto;
 		padding: 2rem;
 
@@ -86,11 +90,6 @@ const Descripton = styled.div`
 
 const CurrentSpace = styled.span`
 	color: ${(props) => props.theme.highlight};
-`
-
-const MobileContainer = styled.div`
-	display: grid;
-	text-align: justify;
 `
 
 const StrongStyled = styled.strong`
@@ -108,26 +107,40 @@ const ShowSection = () => {
 	}
 
 	const ButtonContainer = styled.div`
+		position: absolute;
+		background-color: ${(props) => props.theme.background};
+		opacity: 0.95;
 		width: 100%;
-		padding-right: 1rem;
+		height: 100%;
 		display: grid;
 		justify-self: center;
 		justify-content: end;
 	`
 	const CloseButton = styled.button`
 		background: unset;
-		border: unset;
-		color: whitesmoke;
-		font-size: 20;
-		font-weight: 1000;
-		padding: 0.5rem;
-		justify-self: end;
+		border: 1px solid ${(props) => props.theme.highlight};
+		border-radius: 100px;
+		color: ${(props) => props.theme.highlight};
+		font-size: 2rem;
+		font-weight: 100;
+		padding: 1rem;
+		justify-self: center;
+		align-self: start;
+		& :focus {
+			filter: invert(100%);
+		}
 	`
 	return (
-		<ButtonContainer>
-			<CloseButton onClick={onClick}>{isHidden ? "⬇️" : "X"}</CloseButton>
-			{isHidden ? null : <Element />}
-		</ButtonContainer>
+		<div>
+			{isHidden ? null : (
+				<ButtonContainer>
+					{isHidden ? null : <Element />}
+					<CloseButton onClick={onClick}>
+						{isHidden ? "" : "Close this message"}
+					</CloseButton>
+				</ButtonContainer>
+			)}
+		</div>
 	)
 }
 const Element = () => (
@@ -135,9 +148,9 @@ const Element = () => (
 		<p>
 			This website is optimized for <StrongStyled>desktop</StrongStyled>.{" "}
 		</p>
-		<p>To join the video-chat, download the Jitsi Mobile App.</p>
+		<p>To join the video-chat on your mobile, download the Jitsi Mobile App.</p>
 		<p>Solidity Summit livestream at:</p>
-		<a href="https://www.youtube.com/channel/UCsF67FGXtv4lplQyQSPizbQ">
+		<a href="https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g">
 			Ethereum.org Youtube channel
 		</a>
 	</Descripton>
@@ -194,20 +207,10 @@ const Space = () => {
 				</Header>
 			</BrowserView>
 			<MobileView>
-				<MobileContainer>
-					<ShowSection />
-					<Headline>
-						Welcome to{" "}
-						<a
-							href="https://interspace.solidity-summit.ethereum.org/"
-							target="_blank"
-							rel="noopener noreferrer"
-							style={{ textDecoration: "none" }}>
-							Solidity Summit 2020
-						</a>
-					</Headline>
-					<EthturinMobile />
-				</MobileContainer>
+				<ShowSection />
+				<ImagemapContainerMobile>
+					<SvgImagemapMobile />
+				</ImagemapContainerMobile>
 			</MobileView>
 		</SpaceSelector>
 	)
