@@ -6,9 +6,7 @@ import Jitsilogo from "../../img/jitsi.png";
 
 import ShareButton from "../ShareButton";
 
-const ListWrapper = styled.div`
-  overflow-y: scroll;
-`;
+const ListWrapper = styled.div``;
 
 const Container = styled.div`
   height: 100%;
