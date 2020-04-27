@@ -96,6 +96,7 @@ function CreditsInstance() {
 						Video Conferencing - JitSi Open Source
 					</LinkStyled>
 				</StyledListLink>
+				{/**
 				<StyledListLink>
 					<LinkStyled
 						href="https://sidecar.gitter.im/"
@@ -104,6 +105,7 @@ function CreditsInstance() {
 						Chat integration - Gitter Sidecar
 					</LinkStyled>
 				</StyledListLink>
+				 */}
 			</StyledList>
 
 			<StyledList>

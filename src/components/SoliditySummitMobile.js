@@ -163,7 +163,8 @@ function SvgImagemapMobile(props) {
 				</g>
 				<g
 					id="imagemap_svg__chat"
-					className="click-zone js-gitter-toggle-chat-button">
+					className="click-zone"
+					onClick={() => openInNewTab("https://gitter.im/ethereum/solidity")}>
 					<g id="imagemap_svg__Group_9">
 						<path
 							id="imagemap_svg__chat_2"
