@@ -136,7 +136,7 @@ function CreditsInstance() {
 						href="https://etherscan.io/address/support.interspacechat.eth"
 						target="_blank"
 						rel="noopener noreferrer">
-						noncon.eth
+						support.interspacechat.eth
 					</LinkStyled>{" "}
 				</StyledListItem>
 				<StyledListItem>
