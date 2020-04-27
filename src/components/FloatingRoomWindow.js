@@ -54,7 +54,7 @@ const SpaceContent = styled.div`
 	flex: 1;
 	cursor: auto;
 	div {
-		color: #ffffff;
+		color: ${(props) => props.theme.body};
 	}
 `
 
