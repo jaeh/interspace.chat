@@ -48,7 +48,7 @@ function LivestreamLinksInstance() {
       </Descriptor>
       <ParagraphStyled>
         <LinkStyled
-          href="https://youtu.be/lhjo2FuU4v0"
+          href="https://youtu.be/U3QsM_UDah0"
           target="_blank"
           rel="noopener noreferrer"
         >
