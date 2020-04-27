@@ -67,7 +67,7 @@ const StyledListLink = styled.li`
 const StyledList = styled.ul`
 	padding-top: 2rem;
 	margin: 1rem;
-	background-color: ${(props) => props.theme.background};
+	background-color: red;
 `
 
 function CreditsInstance() {
