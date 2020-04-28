@@ -86,6 +86,11 @@ const Closer = styled.div`
   }
 `;
 
+const RoomLink = styled.a`
+  text-decoration: none;
+  padding-left: 1rem;
+`;
+
 function getFloatingRoomWindow(windowKey) {
   if (windowKey === "loft.radio") {
     return <LoftRadioInstance />;
@@ -305,7 +310,23 @@ function FloatingRoomWindow() {
             <Closer />
           </SpaceHeaderElement>
           <SpaceHeaderElement className="windowKey">
-            {windowKey}
+            {windowKey === "main-room" ? (
+              <span>
+                {windowKey}
+                <RoomLink href="https://jitsi.solidity-summit.ethereum.org/main-room">
+                  🔗
+                </RoomLink>
+              </span>
+            ) : windowKey === "lobby" ? (
+              <span>
+                {windowKey}
+                <RoomLink href="https://jitsi.solidity-summit.ethereum.org/lobby">
+                  🔗
+                </RoomLink>
+              </span>
+            ) : (
+              windowKey
+            )}
           </SpaceHeaderElement>
           <SpaceHeaderElement></SpaceHeaderElement>
         </SpaceHeader>
