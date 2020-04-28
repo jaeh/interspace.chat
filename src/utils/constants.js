@@ -1,4 +1,4 @@
-const domain = "jitsi.solidity-summit.ethereum.org/";
+const domain = "jitsi.solidity-summit.ethereum.org";
 
 export const JitsiInstances = ["main-room", "lobby", "mentor-ring"];
 
