@@ -44,11 +44,11 @@ function LivestreamLinksInstance() {
   return (
     <Container>
       <Descriptor>
-        Direct link to the youtube stream for our conference track:
+        Direct link to the youtube streams of our conference track:
       </Descriptor>
       <ParagraphStyled>
         <LinkStyled
-          href="https://youtu.be/U3QsM_UDah0"
+          href="https://youtu.be/lhjo2FuU4v0"
           target="_blank"
           rel="noopener noreferrer"
         >
