@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
 const Container = styled.div`
   height: 100%;
@@ -9,7 +9,7 @@ const Container = styled.div`
   justify-content: center;
   align-content: center;
   background: whitesmoke;
-`;
+`
 
 const ParagraphStyled = styled.div`
   display: grid;
@@ -20,11 +20,11 @@ const ParagraphStyled = styled.div`
   padding: 1rem;
   justify-items: space-between;
   grid-gap: 1rem;
-`;
+`
 
 const LinkStyled = styled.a`
     
-}`;
+}`
 
 function HubInstance() {
   return (
@@ -38,18 +38,18 @@ function HubInstance() {
           rel="noopener noreferrer"
         >
           main-room
-        </LinkStyled>{" "}
+        </LinkStyled>{' '}
         <LinkStyled
           href="https://hubs.mozilla.com/TsLPctF/lobby-day-1"
           target="_blank"
           rel="noopener noreferrer"
         >
           lobby
-        </LinkStyled>{" "}
+        </LinkStyled>{' '}
         <p>mentor-ring (opens Saturday, 4th April 2020)</p>
       </ParagraphStyled>
     </Container>
-  );
+  )
 }
 
-export default HubInstance;
+export default HubInstance

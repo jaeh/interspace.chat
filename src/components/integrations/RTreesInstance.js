@@ -1,9 +1,18 @@
-import React from "react";
+import React from 'react'
 
-function RTreesInstance({width, height, backgroundColor}) {
-    return (
-        <iframe title="Interspace rTrees" src="https://rtrees.dappy.dev/" style={{height: `${height}px`, width: `${width}px`, border: '0px', backgroundColor: `${backgroundColor}`}}></iframe>
-    )
+function RTreesInstance({ width, height, backgroundColor }) {
+  return (
+    <iframe
+      title="Interspace rTrees"
+      src="https://rtrees.dappy.dev/"
+      style={{
+        height: `${height}px`,
+        width: `${width}px`,
+        border: '0px',
+        backgroundColor: `${backgroundColor}`,
+      }}
+    ></iframe>
+  )
 }
 
-export default RTreesInstance;
+export default RTreesInstance

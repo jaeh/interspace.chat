@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react'
+import styled from '@emotion/styled'
 
-import Titanembeds from "../../img/titanembeds.png";
-import Jitsilogo from "../../img/jitsi.png";
+import Titanembeds from '../../img/titanembeds.png'
+import Jitsilogo from '../../img/jitsi.png'
 
-import ShareButton from "../ShareButton";
+import ShareButton from '../ShareButton'
 
-const ListWrapper = styled.div``;
+const ListWrapper = styled.div``
 
 const Container = styled.div`
   height: 100%;
@@ -15,9 +15,9 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  color: ${(props) => props.theme.body};
+  color: ${props => props.theme.body};
   h3 {
-    color: ${(props) => props.theme.body};
+    color: ${props => props.theme.body};
     font-size: 1.4rem;
     font-weight: 500;
     padding-left: 1rem;
@@ -28,21 +28,21 @@ const Container = styled.div`
       padding-bottom: 0.3rem;
     }
   }
-`;
+`
 
 const LinkStyled = styled.a`
-  color: ${(props) => props.theme.highlight};
+  color: ${props => props.theme.highlight};
   font-size: 18px;
   font-weight: 600;
-`;
+`
 const StyledListItem = styled.li`
-  color: ${(props) => props.theme.body};
+  color: ${props => props.theme.body};
   list-style-type: none;
   padding: 1rem;
   @media (max-height: 900px) {
     padding: 0.3rem;
   }
-`;
+`
 
 const StyledListLink = styled.li`
   list-style-type: none;
@@ -54,13 +54,13 @@ const StyledListLink = styled.li`
   @media (max-height: 900px) {
     grid-gap: 0.3rem;
   }
-`;
+`
 
 const StyledList = styled.ul`
   padding-top: 1rem;
   margin: 1rem;
-  background-color: ${(props) => props.theme.background};
-`;
+  background-color: ${props => props.theme.background};
+`
 
 function CreditsInstance() {
   return (
@@ -69,25 +69,21 @@ function CreditsInstance() {
         <StyledList>
           <h3>Art used:</h3>
           <StyledListItem>
-            "Solidity Summit" graphics by{" "}
+            "Solidity Summit" graphics by{' '}
             <LinkStyled
               href="https://twitter.com/_franzihei"
               target="_blank"
               rel="noopener noreferrer"
             >
               @franzihei
-            </LinkStyled>{" "}
+            </LinkStyled>{' '}
           </StyledListItem>
         </StyledList>
 
         <StyledList>
           <h3>Tech used:</h3>
           <StyledListLink>
-            <LinkStyled
-              href="https://meet.jit.si"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <LinkStyled href="https://meet.jit.si" target="_blank" rel="noopener noreferrer">
               Video Conferencing - JitSi Open Source
             </LinkStyled>
           </StyledListLink>
@@ -106,11 +102,11 @@ function CreditsInstance() {
         <StyledList>
           <h3>Support development:</h3>
           <StyledListItem>
-            Made with{" "}
+            Made with{' '}
             <span role="img" aria-label="heart">
               💝
-            </span>{" "}
-            by{" "}
+            </span>{' '}
+            by{' '}
             <LinkStyled
               href="https://github.com/interspacechat"
               target="_blank"
@@ -120,24 +116,24 @@ function CreditsInstance() {
             </LinkStyled>
           </StyledListItem>
           <StyledListItem>
-            Donate to our interspace.chat{" "}
+            Donate to our interspace.chat{' '}
             <LinkStyled
               href="https://gitcoin.co/grants/516/interspacechat"
               target="_blank"
               rel="noopener noreferrer"
             >
               Gitcoin Grant
-            </LinkStyled>{" "}
+            </LinkStyled>{' '}
           </StyledListItem>
           <StyledListItem>
-            or directly to{" "}
+            or directly to{' '}
             <LinkStyled
               href="https://etherscan.io/address/support.interspacechat.eth"
               target="_blank"
               rel="noopener noreferrer"
             >
               support.interspacechat.eth
-            </LinkStyled>{" "}
+            </LinkStyled>{' '}
           </StyledListItem>
           <StyledListItem>
             Spread the word
@@ -146,7 +142,7 @@ function CreditsInstance() {
         </StyledList>
       </ListWrapper>
     </Container>
-  );
+  )
 }
 
-export default CreditsInstance;
+export default CreditsInstance

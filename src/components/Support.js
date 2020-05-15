@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import Collapsible from "react-collapsible";
+import React from 'react'
+import styled from 'styled-components'
+import Collapsible from 'react-collapsible'
 
-import colors from "../utils/colors";
+import colors from '../utils/colors'
 
-import SupporterParallele from "../img/support-parallele.png";
+import SupporterParallele from '../img/support-parallele.png'
 
 const SupportStyled = styled.nav`
   text-align: left;
@@ -38,26 +38,26 @@ const SupportStyled = styled.nav`
       color: ${colors.highlight};
     }
   }
-`;
+`
 
 const StyledListItem = styled.li`
   list-style-type: none;
   display: flex;
   padding: 1rem;
   color: black;
-`;
+`
 
 const StyledLink = styled.a`
   display: grid;
   grid-template-columns: auto auto;
   text-decoration-line: none;
-`;
+`
 
 const StyledSupportertext = styled.span`
   align-self: center;
   color: black;
   padding: 1rem;
-`;
+`
 
 const Support = () => {
   return (
@@ -66,15 +66,8 @@ const Support = () => {
         <p>Supported by:</p>
         <ul>
           <StyledListItem>
-            <StyledLink
-              href="https://parallele.at"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={SupporterParallele}
-                alt="Supported by Parallele Polis Vienna"
-              />
+            <StyledLink href="https://parallele.at" target="_blank" rel="noopener noreferrer">
+              <img src={SupporterParallele} alt="Supported by Parallele Polis Vienna" />
 
               <StyledSupportertext>Parallele Polis</StyledSupportertext>
             </StyledLink>
@@ -110,7 +103,7 @@ const Support = () => {
         </ul>
       </Collapsible>
     </SupportStyled>
-  );
-};
+  )
+}
 
-export default Support;
+export default Support

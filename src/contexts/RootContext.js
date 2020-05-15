@@ -1,16 +1,14 @@
-import React from "react";
+import React from 'react'
 
-import UserContextProvider from "./UserContext";
-import FloatingSpaceContextProvider from "./FloatingSpaceContext";
+import UserContextProvider from './UserContext'
+import FloatingSpaceContextProvider from './FloatingSpaceContext'
 
-const RootContextProvider = (props) => {
+const RootContextProvider = props => {
   return (
     <UserContextProvider>
-      <FloatingSpaceContextProvider>
-        {props.children}
-      </FloatingSpaceContextProvider>
+      <FloatingSpaceContextProvider>{props.children}</FloatingSpaceContextProvider>
     </UserContextProvider>
-  );
-};
+  )
+}
 
-export default RootContextProvider;
+export default RootContextProvider

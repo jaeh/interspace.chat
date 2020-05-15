@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function CalendarInstance() {
   return (
@@ -10,7 +10,7 @@ function CalendarInstance() {
       scrolling="no"
       title="calendar"
     ></iframe>
-  );
+  )
 }
 
-export default CalendarInstance;
+export default CalendarInstance

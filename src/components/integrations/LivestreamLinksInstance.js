@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react'
+import styled from '@emotion/styled'
 
 const Container = styled.div`
   height: 100%;
@@ -8,17 +8,17 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  color: ${(props) => props.theme.body};
-  background: ${(props) => props.theme.background};
-`;
+  color: ${props => props.theme.body};
+  background: ${props => props.theme.background};
+`
 
 const Descriptor = styled.p`
   font-size: 18px;
   font-weight: 300;
   margin: 3rem;
   text-align: center;
-  color: ${(props) => props.theme.body};
-`;
+  color: ${props => props.theme.body};
+`
 
 const ParagraphStyled = styled.div`
   display: grid;
@@ -29,34 +29,28 @@ const ParagraphStyled = styled.div`
   padding: 1rem;
   justify-items: space-between;
   grid-gap: 1rem;
-`;
+`
 
 const LinkStyled = styled.a`
-  color: ${(props) => props.theme.highlight};
+  color: ${props => props.theme.highlight};
   font-size: 18px;
   font-weight: 600;
   img {
     padding-right: 1rem;
   }
-`;
+`
 
 function LivestreamLinksInstance() {
   return (
     <Container>
-      <Descriptor>
-        Direct link to the youtube stream for our conference track:
-      </Descriptor>
+      <Descriptor>Direct link to the youtube stream for our conference track:</Descriptor>
       <ParagraphStyled>
-        <LinkStyled
-          href="https://youtu.be/U3QsM_UDah0"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <LinkStyled href="https://youtu.be/U3QsM_UDah0" target="_blank" rel="noopener noreferrer">
           main-room
         </LinkStyled>
       </ParagraphStyled>
     </Container>
-  );
+  )
 }
 
-export default LivestreamLinksInstance;
+export default LivestreamLinksInstance

@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import EmailButton from "../img/email.png";
-import FacebookButton from "../img/facebook.png";
-import RedditButton from "../img/reddit.png";
-import TwitterButton from "../img/twitter.png";
+import React from 'react'
+import styled from 'styled-components'
+import EmailButton from '../img/email.png'
+import FacebookButton from '../img/facebook.png'
+import RedditButton from '../img/reddit.png'
+import TwitterButton from '../img/twitter.png'
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -22,10 +22,10 @@ const ButtonContainer = styled.div`
       filter: saturate(0.5);
     }
   }
-`;
+`
 
 const ShareButton = () => {
-  const url = `https://interspace.chat/`;
+  const url = `https://interspace.chat/`
 
   return (
     <ButtonContainer id="share-buttons">
@@ -183,7 +183,7 @@ const ShareButton = () => {
       </a>
       */}
     </ButtonContainer>
-  );
-};
+  )
+}
 
-export default ShareButton;
+export default ShareButton

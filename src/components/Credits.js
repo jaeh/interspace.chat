@@ -1,22 +1,22 @@
-import React from "react";
-import styled from "@emotion/styled";
-import Collapsible from "react-collapsible";
+import React from 'react'
+import styled from '@emotion/styled'
+import Collapsible from 'react-collapsible'
 
-import Titanembeds from "../img/titanembeds.png";
-import Jitsilogo from "../img/jitsi.png";
+import Titanembeds from '../img/titanembeds.png'
+import Jitsilogo from '../img/jitsi.png'
 
-import ShareButton from "./ShareButton";
+import ShareButton from './ShareButton'
 
 const CreditsStyled = styled.nav`
   text-align: left;
 
   .Collapsible__trigger {
-    color: ${(props) => props.theme.color};
-    background-color: ${(props) => props.theme.background};
+    color: ${props => props.theme.color};
+    background-color: ${props => props.theme.background};
     cursor: pointer;
     padding: 0.2rem;
     :hover {
-      background-color: ${(props) => props.theme.highlight};
+      background-color: ${props => props.theme.highlight};
     }
   }
   .Collapsible__contentOuter {
@@ -31,15 +31,15 @@ const CreditsStyled = styled.nav`
     padding: 0.5rem;
 
     a {
-      color: ${(props) => props.theme.highlight};
+      color: ${props => props.theme.highlight};
     }
   }
-`;
+`
 
 const StyledListItem = styled.li`
   list-style-type: none;
   padding: 1rem;
-`;
+`
 
 const StyledListLink = styled.li`
   list-style-type: none;
@@ -48,7 +48,7 @@ const StyledListLink = styled.li`
   grid-template-columns: auto auto;
   align-items: center;
   grid-gap: 0.5rem;
-`;
+`
 
 const Credits = () => {
   return (
@@ -57,48 +57,28 @@ const Credits = () => {
         <p>Art used:</p>
         <ul>
           <StyledListItem>
-            "Solidity Summit" graphics by{" "}
-            <a
-              href="https://twitter.com/lililashka"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            "Solidity Summit" graphics by{' '}
+            <a href="https://twitter.com/lililashka" target="_blank" rel="noopener noreferrer">
               @Lili ✰ ツ
-            </a>{" "}
+            </a>{' '}
           </StyledListItem>
         </ul>
         <hr />
         <p>Tech used:</p>
         <ul>
           <StyledListLink>
-            <a
-              href="https://meet.jit.si"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://meet.jit.si" target="_blank" rel="noopener noreferrer">
               <img src={Jitsilogo} width="30px" alt="Jitsi logo"></img>
             </a>
-            <a
-              href="https://meet.jit.si"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://meet.jit.si" target="_blank" rel="noopener noreferrer">
               Video Conferencing - JitSi Open Source
             </a>
           </StyledListLink>
           <StyledListLink>
-            <a
-              href="https://titanembeds.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://titanembeds.com" target="_blank" rel="noopener noreferrer">
               <img src={Titanembeds} width="30px" alt="Titanembeds logo"></img>
             </a>
-            <a
-              href="https://titanembeds.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://titanembeds.com" target="_blank" rel="noopener noreferrer">
               Chat integration - Titan Embeds
             </a>
           </StyledListLink>
@@ -106,38 +86,34 @@ const Credits = () => {
         <hr />
         <ul>
           <StyledListItem>
-            Made with{" "}
+            Made with{' '}
             <span role="img" aria-label="heart">
               💝
-            </span>{" "}
-            by{" "}
-            <a
-              href="https://github.com/interspacechat"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            </span>{' '}
+            by{' '}
+            <a href="https://github.com/interspacechat" target="_blank" rel="noopener noreferrer">
               interspace.chat
             </a>
           </StyledListItem>
           <StyledListItem>
-            Donate to our interspace.chat{" "}
+            Donate to our interspace.chat{' '}
             <a
               href="https://gitcoin.co/grants/516/interspacechat"
               target="_blank"
               rel="noopener noreferrer"
             >
               Gitcoin Grant
-            </a>{" "}
+            </a>{' '}
           </StyledListItem>
           <StyledListItem>
-            or directly to{" "}
+            or directly to{' '}
             <a
               href="https://etherscan.io/address/support.interspacechat.eth"
               target="_blank"
               rel="noopener noreferrer"
             >
               noncon.eth
-            </a>{" "}
+            </a>{' '}
           </StyledListItem>
           <StyledListItem>
             Spread the word
@@ -146,7 +122,7 @@ const Credits = () => {
         </ul>
       </Collapsible>
     </CreditsStyled>
-  );
-};
+  )
+}
 
-export default Credits;
+export default Credits

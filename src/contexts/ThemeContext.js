@@ -1,43 +1,43 @@
-import React from "react";
-import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
-import theme from "../utils/theme.js";
+import React from 'react'
+import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming'
+import theme from '../utils/theme.js'
 
 const defaultContextData = {
   light: false,
   toggle: () => {},
-};
+}
 
-const ThemeContext = React.createContext(defaultContextData);
-const useTheme = () => React.useContext(ThemeContext);
+const ThemeContext = React.createContext(defaultContextData)
+const useTheme = () => React.useContext(ThemeContext)
 
 const useEffectLightMode = () => {
   const [themeState, setThemeState] = React.useState({
     light: true,
     hasThemeMounted: false,
-  });
+  })
   React.useEffect(() => {
-    const lsLight = localStorage.getItem("light") === "true";
-    setThemeState({ light: lsLight, hasThemeMounted: true });
-    console.log("theme state change happened");
-  }, []);
+    const lsLight = localStorage.getItem('light') === 'true'
+    setThemeState({ light: lsLight, hasThemeMounted: true })
+    console.log('theme state change happened')
+  }, [])
 
-  return [themeState, setThemeState];
-};
+  return [themeState, setThemeState]
+}
 
 const ThemeProvider = ({ children }) => {
-  const [themeState, setThemeState] = useEffectLightMode();
+  const [themeState, setThemeState] = useEffectLightMode()
 
   if (!themeState.hasThemeMounted) {
-    return <div />;
+    return <div />
   }
 
   const toggle = () => {
-    const light = !themeState.light;
-    localStorage.setItem("light", JSON.stringify(light));
-    setThemeState({ ...themeState, light });
-  };
+    const light = !themeState.light
+    localStorage.setItem('light', JSON.stringify(light))
+    setThemeState({ ...themeState, light })
+  }
 
-  const computedTheme = themeState.light ? theme("light") : theme("dark");
+  const computedTheme = themeState.light ? theme('light') : theme('dark')
 
   return (
     <EmotionThemeProvider theme={computedTheme}>
@@ -50,7 +50,7 @@ const ThemeProvider = ({ children }) => {
         {children}
       </ThemeContext.Provider>
     </EmotionThemeProvider>
-  );
-};
+  )
+}
 
-export { ThemeProvider, useTheme };
+export { ThemeProvider, useTheme }

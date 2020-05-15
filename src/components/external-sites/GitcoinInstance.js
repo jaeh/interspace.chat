@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function GitcoinInstance() {
   return (
@@ -8,10 +8,10 @@ function GitcoinInstance() {
       style={{
         height: `100%`,
         width: `100%`,
-        border: "0px",
+        border: '0px',
       }}
     ></iframe>
-  );
+  )
 }
 
-export default GitcoinInstance;
+export default GitcoinInstance

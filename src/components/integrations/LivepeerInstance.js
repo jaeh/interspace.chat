@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function LivepeerInstance() {
   return (
@@ -8,10 +8,10 @@ function LivepeerInstance() {
       style={{
         height: `100%`,
         width: `100%`,
-        border: "0px",
+        border: '0px',
       }}
     ></iframe>
-  );
+  )
 }
 
-export default LivepeerInstance;
+export default LivepeerInstance

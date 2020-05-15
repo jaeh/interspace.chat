@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function LoftRadioInstance({ backgroundColor }) {
   return (
@@ -8,11 +8,11 @@ function LoftRadioInstance({ backgroundColor }) {
       style={{
         height: `100%`,
         width: `100%`,
-        border: "0px",
-        backgroundColor: `${backgroundColor}`
+        border: '0px',
+        backgroundColor: `${backgroundColor}`,
       }}
     ></iframe>
-  );
+  )
 }
 
-export default LoftRadioInstance;
+export default LoftRadioInstance
