@@ -15,62 +15,62 @@ WebFont.load({
 	},
 })
 
+const styles = css`
+	* {
+		margin: 0px;
+		padding: 0px;
+		font-family: "Fira Code", monospace;
+		font-weight: 300;
+		font-size: 14px;
+	}
+	body {
+		margin: 0px;
+		padding: 0px;
+		color: whitesmoke;
+		background-color: #e6e7ec;
+	}
+	.hidden {
+		opacity: 0;
+		filter: url(#blur0);
+	}
+	.click-zone {
+		transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+		& :hover {
+			cursor: pointer;
+			filter: url(#turbulence);
+
+			& .hidden {
+				opacity: 1;
+			}
+		}
+	}
+	.click-zone-mobile {
+		transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+		& :focus {
+			filter: url(#turbulence);
+
+			& .hidden {
+				opacity: 1;
+			}
+		}
+	}
+	.click-link {
+		transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+		& :hover {
+			cursor: pointer;
+			fill: #fce96a;
+		}
+	}
+	.title :hover {
+		fill: black;
+	}
+`
+
 ReactDOM.render(
 	<ThemeProvider>
-		<Global
-			styles={css`
-				* {
-					margin: 0px;
-					padding: 0px;
-					font-family: "Fira Code", monospace;
-					font-weight: 300;
-					font-size: 14px;
-				}
-				body {
-					margin: 0px;
-					padding: 0px;
-					color: whitesmoke;
-					background-color: #e6e7ec;
-				}
-				.hidden {
-					opacity: 0;
-					filter: url(#blur0);
-				}
-				.click-zone {
-					transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-
-					& :hover {
-						cursor: pointer;
-						filter: url(#turbulence);
-
-						& .hidden {
-							opacity: 1;
-						}
-					}
-				}
-				.click-zone-mobile {
-					transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-
-					& :focus {
-						filter: url(#turbulence);
-
-						& .hidden {
-							opacity: 1;
-						}
-					}
-				}
-				.click-link {
-					transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-					& :hover {
-						cursor: pointer;
-						fill: #fce96a;
-					}
-				}
-				.title :hover {
-					fill: black;
-				}
-			`}
-		/>
+		<Global styles={styles} />
 		<App />
 	</ThemeProvider>,
 	document.getElementById("root")
