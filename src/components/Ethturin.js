@@ -3,6 +3,8 @@ import styled from '@emotion/styled'
 
 import { FloatingSpaceContext } from '../contexts/FloatingSpaceContext'
 
+import { poap } from '../utils/index'
+
 const ImagemapContainer = styled.div`
   max-width: 40vw;
   margin: auto auto;
@@ -182,21 +184,7 @@ const BottomLinks = styled.span`
 `
 
 const Ethturin = () => {
-  const { addFloatingSpace, currentFloatingSpaces } = useContext(FloatingSpaceContext)
-  const space = currentFloatingSpaces
-
-  const poap = () => {
-    if (space.indexOf('claim poap token') > -1) {
-      window.alert(
-        'To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem.',
-      )
-    } else {
-      window.alert(
-        'To claim your POAP token paste your wallet address along with your role(s) at noncon (speaker, organizer, volunteer, attendee) in the #claim-poap-token discord channel and you will receive a PM with a link to redeem.',
-      )
-      addFloatingSpace('claim poap token')
-    }
-  }
+  const { addFloatingSpace, currentFloatingSpaces: space } = useContext(FloatingSpaceContext)
 
   return (
     <ImagemapContainer>
@@ -278,7 +266,7 @@ const Ethturin = () => {
           />
         </Cell7>
         <BottomLinks>
-          <Cell8 onClick={() => poap()}>
+          <Cell8 onClick={() => poap(space)}>
             <img className="title" src={require('../img/ethturin-elements/8-poap.png')} alt="" />
             <img
               className="portal"
